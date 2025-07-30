@@ -1,4 +1,10 @@
 import "./globals.css";
+import { Geist } from "next/font/google";
+
+const geist = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+});
 
 export default function RootLayout({
   children,
@@ -6,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${geist.variable}  antialiased`}>
       <body className={`antialiased`}>{children}</body>
     </html>
   );
