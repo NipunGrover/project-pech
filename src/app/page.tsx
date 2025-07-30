@@ -1,10 +1,10 @@
-import { Header } from "@/components/sections/Header";
-import { Hero } from "@/components/sections/Hero";
-import { Statistics } from "@/components/sections/Statistics";
-import { Goal } from "@/components/sections/Goal";
-import { DataSection } from "@/components/sections/DataSection";
-import { CommunitySpotlight } from "@/components/sections/CommunitySpotlight";
-import { Footer } from "@/components/sections/Footer";
+import { Header } from "@/components/index-page/sections/Header";
+import { Hero } from "@/components/index-page/sections/Hero";
+import { Statistics } from "@/components/index-page/sections/Statistics";
+import { Goal } from "@/components/index-page/sections/Goal";
+import { DataSection } from "@/components/index-page/sections/DataSection";
+import { CommunitySpotlight } from "@/components/index-page/sections/CommunitySpotlight";
+import { Footer } from "@/components/index-page/sections/Footer";
 
 export default function Home() {
   return (
