@@ -56,7 +56,10 @@ export function Header() {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Button variant="default" className="bg-gray-800 text-white hover:bg-gray-900">
+            <Button
+              variant="default"
+              className="bg-gray-800 text-white hover:bg-gray-900 cursor-pointer"
+            >
               Find help now
             </Button>
           </div>
