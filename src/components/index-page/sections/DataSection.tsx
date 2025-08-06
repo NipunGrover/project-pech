@@ -1,4 +1,7 @@
 import { Home, TrendingUp } from "lucide-react";
+import { BuildingIllustration } from "@/components/BuildingIllustration";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import {
 	TypographyBlockquote,
 	TypographyH2,

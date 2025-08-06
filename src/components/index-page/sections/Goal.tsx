@@ -1,4 +1,5 @@
 import { BuildingIllustration } from "@/components/BuildingIllustration";
+import { Button } from "@/components/ui/button";
 import {
 	TypographyH2,
 	TypographyLarge,
