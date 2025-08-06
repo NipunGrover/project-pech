@@ -2,13 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+import { Navigation } from "@/components/Navigation";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -21,13 +15,6 @@ export function Header() {
     setIsMobileMenuOpen(false);
   };
 
-  const navigationItems = [
-    { href: "#the-plan", label: "The Plan" },
-    { href: "#data-trends", label: "Data & Trends" },
-    { href: "#community-spotlight", label: "Community Spotlight" },
-    { href: "#about", label: "About" },
-  ];
-
   return (
     <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4">
@@ -38,27 +25,7 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-2">
-            <NavigationMenu>
-              <NavigationMenuList>
-                {navigationItems.map((item) => (
-                  <NavigationMenuItem key={item.href}>
-                    <NavigationMenuLink
-                      href={item.href}
-                      className="text-gray-700 hover:text-gray-900 hover:bg-gray-100 px-4 py-2 text-sm font-medium transition-colors rounded-md"
-                    >
-                      {item.label}
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                ))}
-              </NavigationMenuList>
-            </NavigationMenu>
-
-            <Button
-              variant="default"
-              className="bg-gray-800 text-white hover:bg-gray-900 cursor-pointer"
-            >
-              Find help now
-            </Button>
+            <Navigation />
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -91,25 +58,7 @@ export function Header() {
           }`}
         >
           <nav className="py-4 space-y-2">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block text-gray-700 hover:text-gray-900 hover:bg-gray-100 px-4 py-3 text-sm font-medium transition-colors rounded-md"
-                onClick={closeMobileMenu}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <div className="px-4 pt-2">
-              <Button
-                variant="default"
-                className="w-full bg-gray-800 text-white hover:bg-gray-900 cursor-pointer"
-                onClick={closeMobileMenu}
-              >
-                Find help now
-              </Button>
-            </div>
+            <Navigation isMobile={true} onLinkClick={closeMobileMenu} />
           </nav>
         </div>
       </div>
