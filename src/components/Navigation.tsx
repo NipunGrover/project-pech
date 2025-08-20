@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const navigationItems = [
-  { href: "#the-plan", label: "The Plan" },
+  { href: "/plan", label: "The Plan" },
   { href: "#data-trends", label: "Data & Trends" },
   { href: "#community-spotlight", label: "Community Spotlight" },
   { href: "#about", label: "About" },
