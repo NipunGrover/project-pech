@@ -48,10 +48,11 @@ function FocusAreaCard({ area }: { area: FocusArea }) {
     <Card
       className={cn(
         v.card,
-        "rounded-md shadow-sm transition-transform duration-300 ease-in-out hover:scale-[1.02] aspect-auto flex h-full"
+        "rounded-lg shadow-sm transition-transform duration-200 md:hover:scale-[1.02]",
+        "aspect-[1.3/1]"
       )}
     >
-      <CardContent className="p-4 md:p-5 flex flex-col justify-between w-full">
+      <CardContent className="p-4 md:p-5 flex flex-col justify-between w-full h-full">
         {/* top row */}
         <div className="flex items-start justify-between">
           {/* image placeholder */}
@@ -198,7 +199,7 @@ export function PlanOverview() {
           </TypographyH3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6 max-w-xs md:max-w-4xl mx-auto items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-7 items-stretch">
           {AREAS.map((a) => (
             <FocusAreaCard key={a.id} area={a} />
           ))}
