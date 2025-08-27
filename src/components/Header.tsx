@@ -22,11 +22,10 @@ export function Header() {
 	};
 
 	const navigationItems = [
-		{ href: "#the-plan", label: "The Plan" },
-		{ href: "#data-trends", label: "Data & Trends" },
-		{ href: "#community-spotlight", label: "Community Spotlight" },
-		{ href: "/co-creators", label: "Co-creators" },
-		{ href: "#about", label: "About" },
+		{ href: "/plan", label: "The Plan" },
+		{ href: "/data", label: "Data & Trends" },
+		{ href: "/co-creators", label: "Co-creator space" },
+		{ href: "/about", label: "About" },
 	];
 
 	return (
