@@ -7,6 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 PECH (The Plan to End Chronic Homelessness) is a civic tech website for Waterloo Region. This is primarily an informational website with dynamic data visualization features, designed to present strategies, resources, and timelines for ending chronic homelessness in the community.
 
 The site features:
+
 - Static informational content and community engagement features
 - Dynamic data visualization pulled from Directus CMS
 - Town hall meeting information and newsletter signup
@@ -15,6 +16,7 @@ The site features:
 ## Tech Stack & Architecture
 
 **Frontend:**
+
 - Next.js 15 with App Router
 - React 19
 - TypeScript with strict mode enabled
@@ -22,11 +24,13 @@ The site features:
 - shadcn/ui components with Radix UI primitives
 
 **Backend & Data:**
+
 - Directus CMS as primary backend (hosted on DigitalOcean)
 - GraphQL API via Directus SDK for data fetching
 - Incremental Static Regeneration (ISR) for caching dynamic content
 
 **Deployment:**
+
 - Vercel auto-deployment (connects to main branch)
 - Modern browsers only support
 
@@ -34,7 +38,7 @@ The site features:
 
 ```bash
 npm run dev          # Start development server
-npm run build        # Build for production  
+npm run build        # Build for production
 npm run start        # Start production build locally
 npm run lint         # Run ESLint
 npm run lint:fix     # Fix linting issues automatically
@@ -73,11 +77,13 @@ src/
 ## Component Organization Patterns
 
 **Current Pattern Analysis:**
+
 - Page-specific components in feature folders (`index-page/sections/`)
 - Base UI components in `ui/` directory
 - Reusable utilities in `lib/`
 
 **Recommendations for New Features:**
+
 - Follow the existing pattern: `components/[feature-name]/`
 - Break down complex components into smaller, composable pieces
 - Prefer composition over complex prop drilling
@@ -88,17 +94,20 @@ src/
 ## Important Development Patterns
 
 ### Server vs Client Components
+
 - **Default:** Use Server Components for static content and data fetching
 - **Client Components:** Only when you need interactivity, browser APIs, or state
 - **Data Fetching:** Use Server Components to fetch from Directus via GraphQL
 
 ### Styling & UI
+
 - Use shadcn/ui components for consistent design system
 - All components must be responsive and work on all screen sizes
 - Accessibility is critical - leverage Radix UI's built-in a11y features
 - Custom styling with Tailwind CSS follows the existing design tokens
 
 ### State Management
+
 - Prefer React's built-in `useState` for local state
 - No global state management library currently used
 - Only install additional state management if absolutely necessary
@@ -121,15 +130,18 @@ src/
 ## Current Development Status
 
 **Implemented:**
+
 - Landing page with Hero, Statistics, Goal, DataSection, CommunitySpotlight sections
 - Basic layout with Header component
 - shadcn/ui component library setup
 - ESLint configuration with strict rules
 
 **In Progress:**
+
 - Co-creators page (currently placeholder)
 
 **Planned Features:**
+
 - Data visualization components
 - Dynamic content from Directus
 - Additional informational sections per Figma designs
