@@ -116,9 +116,51 @@ src/
 
 - **Purpose:** Primary CMS/backend for dynamic content
 - **API:** GraphQL via `@directus/sdk`
+- **Authentication:** Uses static token via `DIRECTUS_TOKEN` environment variable
 - **Caching:** Use ISR for dynamic data that doesn't change frequently
 - **Data Privacy:** All data stored in Directus is anonymized
 - **Security:** Flag any potentially sensitive data for review when working with AI agents
+
+### **IMPORTANT: Asset Handling Pattern**
+
+**ALWAYS use the assets utility functions for Directus assets/images:**
+
+```typescript
+// ✅ CORRECT: Use assets utility
+import { getDirectusAssetUrlWithFallback } from "@/lib/assets";
+
+const imageUrl = getDirectusAssetUrlWithFallback(member.profile_image);
+<Image src={imageUrl} />
+
+// ✅ ALSO CORRECT: Direct utility call
+import { getDirectusAssetUrl } from "@/lib/assets";
+<Image src={getDirectusAssetUrl(assetId)} />
+
+// ❌ WRONG: Direct API route (bypasses utility)
+<Image src={`/api/image/${assetId}`} />
+
+// ❌ WRONG: Direct Directus URL (exposes credentials)
+<Image src={`${process.env.DIRECTUS_URL}/assets/${assetId}`} />
+```
+
+**Why:** The `/api/image/[id]/route.ts` proxy handles server-side authentication and prevents exposing credentials to the client. This route:
+
+- Authenticates with Directus using server-side `DIRECTUS_TOKEN`
+- Streams images back to the client with proper caching headers
+- Handles errors gracefully
+- Keeps credentials secure
+
+**Configuration:**
+
+- Directus client: `src/lib/directus.ts` (configured with static token)
+- Assets utilities: `src/lib/assets.ts` (helper functions for asset URLs)
+- Image proxy: `src/app/api/image/[id]/route.ts`
+- Environment variables: `DIRECTUS_URL` and `DIRECTUS_TOKEN`
+
+**Available utility functions:**
+
+- `getDirectusAssetUrl(assetId)` - Returns proxy URL for a given asset ID
+- `getDirectusAssetUrlWithFallback(assetId?, fallback?)` - Returns proxy URL or fallback if no asset ID
 
 ## Design & Accessibility
 

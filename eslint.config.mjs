@@ -38,4 +38,5 @@ export default antfu({
 			"no-var": "error",
 		},
 	},
+	ignores: ["CLAUDE.md"],
 });

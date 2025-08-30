@@ -5,7 +5,7 @@ import { cva } from "class-variance-authority";
 import React from "react";
 import { cn } from "@/lib/utils";
 
-export const textVariants = cva("", {
+export const TextVariants = cva("", {
 	variants: {
 		size: {
 			xs: "text-[0.75rem] leading-[1.125rem]",
@@ -27,7 +27,7 @@ export const textVariants = cva("", {
 	},
 });
 
-type BaseTextProps = VariantProps<typeof textVariants>;
+type BaseTextProps = VariantProps<typeof TextVariants>;
 
 type TextProps<C extends React.ElementType = "p">
 	= PolymorphicComponentPropWithRef<C, BaseTextProps>;
@@ -47,7 +47,7 @@ const Text: TextComponent = <C extends React.ElementType = "p">({
 
 	return (
 		<Component
-			className={cn(textVariants({ size, weight }), className)}
+			className={cn(TextVariants({ size, weight }), className)}
 			{...props}
 		/>
 	);

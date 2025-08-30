@@ -1,43 +1,27 @@
+import type { Profile } from "@/lib/directus";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { TypographyH2 } from "@/components/ui/typography";
+import { getDirectusAssetUrlWithFallback } from "@/lib/assets";
+import { directus, readItems } from "@/lib/directus";
 
-interface TeamMember {
-	id: string;
-	name: string;
-	role: string;
-	description: string;
-	photo?: string;
-}
+async function getCoordinatingTeam(): Promise<Profile[]> {
+	try {
+		const coordinators = await directus.request(
+			readItems("profiles", {
+				filter: {
+					is_coordinator: { _eq: true },
+					status: { _eq: "published" },
+				},
+				fields: ["id", "display_name", "display_blurb", "profile_image", "status", "is_coordinator"],
+			}),
+		);
 
-async function getCoordinatingTeam(): Promise<TeamMember[]> {
-	// TODO: Replace with actual Directus API call
-	// For now, return placeholder data
-	return [
-		{
-			id: "1",
-			name: "Name",
-			role: "Role",
-			description: "Description of their role, expertise, and how they contribute to the coordination team. Describes their background and experience in this work of ending chronic homelessness in the region.",
-		},
-		{
-			id: "2",
-			name: "Name",
-			role: "Role",
-			description: "Description of their role, expertise, and how they contribute to the coordination team. Describes their background and experience in this work of ending chronic homelessness in the region.",
-		},
-		{
-			id: "3",
-			name: "Name",
-			role: "Role",
-			description: "Description of their role, expertise, and how they contribute to the coordination team. Describes their background and experience in this work of ending chronic homelessness in the region.",
-		},
-		{
-			id: "4",
-			name: "Name",
-			role: "Role",
-			description: "Description of their role, expertise, and how they contribute to the coordination team. Describes their background and experience in this work of ending chronic homelessness in the region.",
-		},
-	];
+		return coordinators;
+	} catch (error) {
+		console.error("Failed to fetch coordinating team:", error);
+		return [];
+	}
 }
 
 export default async function CoordinatingTeam() {
@@ -59,10 +43,24 @@ export default async function CoordinatingTeam() {
 					{teamMembers.map(member => (
 						<Card key={member.id} className="text-center">
 							<CardContent className="pt-6">
-								<div className="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-								<h3 className="text-lg font-semibold mb-2">{member.name}</h3>
-								<p className="text-sm text-gray-600 mb-3">{member.role}</p>
-								<p className="text-sm text-gray-600">{member.description}</p>
+								{(() => {
+									const imageUrl = getDirectusAssetUrlWithFallback(member.profile_image);
+									return imageUrl
+										? (
+											<Image
+												src={imageUrl}
+												alt={member.display_name}
+												width={96}
+												height={96}
+												className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+											/>
+										)
+										: (
+											<div className="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
+										);
+								})()}
+								<h3 className="text-lg font-semibold mb-2">{member.display_name}</h3>
+								<p className="text-sm text-gray-600">{member.display_blurb}</p>
 							</CardContent>
 						</Card>
 					))}
