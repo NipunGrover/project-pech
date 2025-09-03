@@ -3,7 +3,6 @@
 import type { Profile } from "@/lib/directus";
 import Image from "next/image";
 import { Container } from "@/components/ui/container";
-import { TypographyH2 } from "@/components/ui/typography";
 import { getDirectusAssetUrl } from "@/lib/assets";
 import { directus, readItems } from "@/lib/directus";
 import { Heading } from "../ui/heading";
