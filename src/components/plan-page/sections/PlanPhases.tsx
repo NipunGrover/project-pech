@@ -95,17 +95,17 @@ function RoadmapCanvas() {
 			<div className="relative">
 				{/* Top zone: line at the bottom, text above it */}
 				<div className="relative mb-0 h-16">
-					{markers.filter(m => m.side === "top").map((m, idx) => (
+					{markers.filter(m => m.side === "top").map(m => (
 						<div
-							key={`t-line-${idx}`}
+							key={`t-line-${m.title}-${m.position}`}
 							className="absolute bottom-0 h-6 w-px bg-[rgba(82,82,82,0.6)]"
 							style={{ left: `${m.position}%` }}
 							aria-hidden
 						/>
 					))}
-					{markers.filter(m => m.side === "top").map((m, idx) => (
+					{markers.filter(m => m.side === "top").map(m => (
 						<div
-							key={`t-text-${idx}`}
+							key={`t-text-${m.title}-${m.position}`}
 							className="absolute"
 							style={{
 								left: `${m.position}%`,
@@ -128,12 +128,11 @@ function RoadmapCanvas() {
 				<div className="relative z-10 mb-0">
 					<div className="flex w-full h-10 overflow-hidden rounded-md">
 						{segments.map((seg, i) => {
-							const radius
-                = i === 0
-                	? "rounded-l-md"
-                	: i === segments.length - 1
-                		? "rounded-r-md"
-                		: "";
+							const radius = i === 0
+								? "rounded-l-md"
+								: i === segments.length - 1
+									? "rounded-r-md"
+									: "";
 							const style: React.CSSProperties = seg.gradient
 								? {
 									width: `${seg.width}%`,
@@ -160,17 +159,17 @@ function RoadmapCanvas() {
 
 				{/* Bottom zone: line at the top, text below it */}
 				<div className="relative mt-0 h-16">
-					{markers.filter(m => m.side === "bottom").map((m, idx) => (
+					{markers.filter(m => m.side === "bottom").map(m => (
 						<div
-							key={`b-line-${idx}`}
+							key={`b-line-${m.title}-${m.position}`}
 							className="absolute top-0 h-6 w-px bg-[rgba(82,82,82,0.6)]"
 							style={{ left: `${m.position}%` }}
 							aria-hidden
 						/>
 					))}
-					{markers.filter(m => m.side === "bottom").map((m, idx) => (
+					{markers.filter(m => m.side === "bottom").map(m => (
 						<div
-							key={`b-text-${idx}`}
+							key={`b-text-${m.title}-${m.position}`}
 							className="absolute"
 							style={{
 								left: `${m.position}%`,

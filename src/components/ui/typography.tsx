@@ -61,7 +61,9 @@ export function TypographyH4({ children, className }: TypographyProps) {
 
 export function TypographyP({ children, className }: TypographyProps) {
 	return (
-		<p className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}>
+		<p
+			className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+		>
 			{children}
 		</p>
 	);
@@ -69,19 +71,25 @@ export function TypographyP({ children, className }: TypographyProps) {
 
 export function TypographyLead({ children, className }: TypographyProps) {
 	return (
-		<p className={cn("text-xl text-muted-foreground", className)}>{children}</p>
+		<p className={cn("text-xl text-muted-foreground", className)}>
+			{children}
+		</p>
 	);
 }
 
 export function TypographyLarge({ children, className }: TypographyProps) {
 	return (
-		<div className={cn("text-lg font-semibold", className)}>{children}</div>
+		<div className={cn("text-lg font-semibold", className)}>
+			{children}
+		</div>
 	);
 }
 
 export function TypographySmall({ children, className }: TypographyProps) {
 	return (
-		<small className={cn("text-sm font-medium leading-none", className)}>
+		<small
+			className={cn("text-sm font-medium leading-none", className)}
+		>
 			{children}
 		</small>
 	);
@@ -89,13 +97,20 @@ export function TypographySmall({ children, className }: TypographyProps) {
 
 export function TypographyMuted({ children, className }: TypographyProps) {
 	return (
-		<p className={cn("text-sm text-muted-foreground", className)}>{children}</p>
+		<p className={cn("text-sm text-muted-foreground", className)}>
+			{children}
+		</p>
 	);
 }
 
-export function TypographyBlockquote({ children, className }: TypographyProps) {
+export function TypographyBlockquote({
+	children,
+	className,
+}: TypographyProps) {
 	return (
-		<blockquote className={cn("mt-6 border-l-2 pl-6 italic", className)}>
+		<blockquote
+			className={cn("mt-6 border-l-2 pl-6 italic", className)}
+		>
 			{children}
 		</blockquote>
 	);

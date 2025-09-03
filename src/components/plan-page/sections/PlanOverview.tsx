@@ -1,6 +1,6 @@
 // app/components/plan-overview.tsx
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { TypographyH3 } from "@/components/ui/typography";
 import { cn } from "@/lib/utils";
@@ -122,18 +122,18 @@ function FocusAreaModal({
 	originRect: DOMRect | null;
 }) {
 	const [animationState, setAnimationState] = useState<
-    "entering" | "entered" | "exiting"
+		"entering" | "entered" | "exiting"
 	>("entering");
 	const modalRef = useRef<HTMLDivElement>(null);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		if (isOpen) {
 			setAnimationState("entering");
-			// Start the scaling animation after a brief delay
-			const timer = setTimeout(() => setAnimationState("entered"), 50);
+			const timer = window.setTimeout(() => setAnimationState("entered"), 50);
 			return () => clearTimeout(timer);
 		}
 		setAnimationState("exiting");
+		return undefined;
 	}, [isOpen]);
 
 	const handleClose = () => {
@@ -141,8 +141,9 @@ function FocusAreaModal({
 		setTimeout(onClose, 300);
 	};
 
-	if (!isOpen || !area)
+	if (!isOpen || !area) {
 		return null;
+	}
 
 	const v = VARIANT[area.variant ?? "light"];
 
@@ -150,7 +151,8 @@ function FocusAreaModal({
 	const getTransformClasses = () => {
 		if (animationState === "entering") {
 			return "modal-transform-enter";
-		} if (animationState === "entered") {
+		}
+		if (animationState === "entered") {
 			return "modal-transform-entered";
 		}
 		return "modal-transform-exiting";
@@ -238,6 +240,7 @@ function FocusAreaModal({
 			>
 				{/* Close button */}
 				<button
+					type="button"
 					onClick={handleClose}
 					className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/20 hover:bg-black/40 transition-colors"
 					aria-label="Close modal"
@@ -288,8 +291,8 @@ function FocusAreaModal({
 							Key Focus Areas:
 						</h3>
 						<ul className="space-y-3">
-							{area.keyPoints.map((point, index) => (
-								<li key={index} className="flex items-start gap-3">
+							{area.keyPoints.map(point => (
+								<li key={point} className="flex items-start gap-3">
 									<div
 										className={cn(
 											"w-2 h-2 rounded-full mt-2 flex-shrink-0",
@@ -436,7 +439,6 @@ export function PlanOverview() {
 				<div className="max-w-6xl mx-auto px-4 space-y-8">
 					<div className="space-y-2">
 						<TypographyH3
-							id="progress-title"
 							className="font-semibold text-pech-deep-teal border-none p-0"
 						>
 							Our Focus Areas

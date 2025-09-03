@@ -13,9 +13,8 @@ export function PlanHero() {
 			className="bg-neutral-800 text-white py-14 lg:py-16"
 		>
 			<div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-				<div className="space-y-6">
+				<div id="plan-title" className="space-y-6">
 					<TypographyH2
-						id="plan-title"
 						className="text-3xl md:text-4xl font-semibold tracking-tight"
 					>
 						The Plan

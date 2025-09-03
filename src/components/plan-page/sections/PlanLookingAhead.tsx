@@ -39,7 +39,6 @@ export default function PlanLookingAhead() {
 			<div className="max-w-6xl mx-auto px-4 space-y-6">
 				<div className="space-y-1">
 					<TypographyH3
-						id="looking-ahead-title"
 						className="font-semibold text-pech-deep-teal border-none p-0"
 					>
 						Looking Ahead

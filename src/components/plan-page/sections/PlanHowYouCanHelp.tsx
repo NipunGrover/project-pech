@@ -20,7 +20,6 @@ export default function PlanHowYouCanHelp() {
 		>
 			<div className="max-w-6xl mx-auto px-4 space-y-6">
 				<TypographyH3
-					id="how-you-can-help-title"
 					className="font-semibold text-white border-none p-0"
 				>
 					How you can help
@@ -61,8 +60,8 @@ export default function PlanHowYouCanHelp() {
 								type="button"
 								aria-label="Sign up (coming soon)"
 								title="Coming soon"
-								onClick={() => alert("Sign-ups coming soon")}
-								className="bg-pech-deep-teal hover:bg-pech-deep-teal/90 text-white"
+								disabled
+								className="bg-pech-deep-teal hover:bg-pech-deep-teal/90 text-white disabled:opacity-70 disabled:cursor-not-allowed"
 							>
 								Sign up
 							</Button>
