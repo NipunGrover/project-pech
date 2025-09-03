@@ -10,7 +10,7 @@ export default function CoCreators() {
 	return (
 		<div className="min-h-screen">
 			{/* Hero Section */}
-			<section className="bg-brand-charcoal text-white py-20">
+			<section className="bg-brand-black text-white py-20">
 				<Container size="6xl">
 					<div className="grid lg:grid-cols-2 gap-12 items-center">
 						<div className="flex flex-col gap-4">
@@ -21,7 +21,7 @@ export default function CoCreators() {
 								This plan was built by our community, for our community. Our co-creators include people with lived experience of homelessness, service providers, advocates, and local leaders. Each person brought their ideas, skills, and stories to help shape a plan that works for everyone in Waterloo Region.
 							</Text>
 						</div>
-						<div className="bg-brand-teal h-64 aspect-[4/3] rounded-lg" />
+						<div className="bg-brand-medium-green h-64 aspect-[4/3] rounded-lg" />
 					</div>
 				</Container>
 			</section>
@@ -31,24 +31,24 @@ export default function CoCreators() {
 			<CoCreatorsList />
 
 			<Container size="6xl">
-				<section className="bg-brand-light-gray py-20">
+				<section className="bg-brand-white py-20">
 					<div className="flex flex-col gap-4">
 
-						<Heading size="lg" className="text-brand-dark-teal">About PECH</Heading>
+						<Heading size="lg" className="text-brand-dark-green">About PECH</Heading>
 
-						<div className="flex flex-row gap-2 items-center">
+						<div className="flex flex-row gap-8 flex-wrap items-center">
 							<Text
 								size="xl"
-								className="font-semibold text-brand-medium-gray"
+								className="font-semibold text-brand-grey max-w-3xl"
 							>
 								Plan to End Chronic Homelessness Prototyping Pilot Project started in March 2023 involving a team of lived experts, Region and SDC staff, seeking to enable implementation of potential solutions  to end chronic homelessness rooted in lived experience of unsheltered  and hidden homeless. The "Lived Expertise Prototyping Project" process report was compiled to describe the work done by August 2023, and was interwoven into the Key Findings Report that was presented to the Council on September 12th.
 							</Text>
-							<div className="flex-shrink-0 w-48 h-48">
+							<div className="flex-shrink-0 w-64 h-64">
 								<Image
 									alt="Logo of the PECH organization"
 									src="/logomark.png"
-									width={192}
-									height={192}
+									width={256}
+									height={256}
 									className="w-full h-full object-contain"
 									priority
 								/>

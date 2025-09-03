@@ -3,17 +3,17 @@
 
 @theme inline {
 	/* Primary Brand Colors */
-	--color-brand-charcoal: #2c2c2c;
-	--color-brand-light-gray: #fafafa;
-	--color-brand-medium-gray: #5a5a5a;
-	--color-brand-coral: #db4d52;
-	--color-brand-cream: #f5f4ed;
+	--color-brand-black: #2c2c2c;
+	--color-brand-white: #fafafa;
+	--color-brand-grey: #5a5a5a;
+	--color-brand-red: #db4d52;
+	--color-brand-yellow: #f5f4ed;
 
 	/* Secondary Brand Colors */
-	--color-brand-teal: #1e968c;
-	--color-brand-dark-teal: #095a5a;
-	--color-brand-mint: #71c6ac;
-	--color-brand-lime: #81ae30;
+	--color-brand-medium-green: #1e968c;
+	--color-brand-dark-green: #095a5a;
+	--color-brand-light-green: #71c6ac;
+	--color-brand-green: #81ae30;
 	--color-brand-sky-blue: #469ddc;
 }
 
@@ -46,7 +46,7 @@
 	--color-secondary-foreground: var(--secondary-foreground);
 	--color-secondary: var(--secondary);
 	--color-primary-foreground: var(--primary-foreground);
-	--color-primary: var(--color-brand-dark-teal);
+	--color-primary: var(--color-brand-dark-green);
 	--color-popover-foreground: var(--popover-foreground);
 	--color-popover: var(--popover);
 	--color-card-foreground: var(--card-foreground);

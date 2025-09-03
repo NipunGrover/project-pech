@@ -36,7 +36,7 @@ export default async function CoCreatorsList() {
 	const coCreators = await getCoCreators();
 
 	return (
-		<section className="bg-brand-charcoal text-white py-20">
+		<section className="bg-brand-black text-white py-20">
 			<Container size="6xl">
 				<div className="flex flex-col gap-4">
 					<Heading size="lg" className="font-bold">
@@ -83,7 +83,7 @@ export default async function CoCreatorsList() {
 								</Text>
 								<Text
 									size="sm"
-									className="text-brand-teal text-sm truncate max-w-20"
+									className="text-brand-medium-green text-sm truncate max-w-20"
 								>
 									{creator.display_blurb}
 								</Text>

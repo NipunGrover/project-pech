@@ -38,7 +38,7 @@ export default async function CoordinatingTeam() {
 	return (
 		<section className="bg-white py-20">
 			<Container size="6xl">
-				<TypographyH2 className="font-semibold mb-4 text-brand-dark-teal">
+				<TypographyH2 className="font-semibold mb-4 text-brand-dark-green">
 					Coordinating team
 				</TypographyH2>
 				<p className="text-gray-600 mb-16">
@@ -59,7 +59,7 @@ export default async function CoordinatingTeam() {
 										/>
 									)
 									: (
-										<div className="w-full h-full bg-brand-teal flex items-center justify-center">
+										<div className="w-full h-full bg-brand-medium-green flex items-center justify-center">
 											<span className="text-white text-5xl font-semibold">
 												{member.display_name.charAt(0).toUpperCase()}
 											</span>
