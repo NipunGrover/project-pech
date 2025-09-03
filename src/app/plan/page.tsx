@@ -3,6 +3,7 @@ import { PlanOverview } from "@/components/plan-page/sections/PlanOverview";
 import { PlanGetInvolved } from "@/components/plan-page/sections/PlanGetInvolved";
 import { PlanFAQ } from "@/components/plan-page/sections/PlanFAQ";
 import PlanPhases from "@/components/plan-page/sections/PlanPhases";
+import PlanLookingAhead from "@/components/plan-page/sections/PlanLookingAhead";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function PlanPage() {
       <PlanHero />
       <PlanOverview />
       <PlanPhases />
+      <PlanLookingAhead />
     </>
   );
 }
