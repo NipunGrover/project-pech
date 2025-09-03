@@ -63,11 +63,18 @@ export default function PlanPhases() {
       className="bg-neutral-800 text-white py-14 lg:py-16"
     >
       <div className="max-w-6xl mx-auto px-4 space-y-8">
-        <h3
-          id="roadmap-title"
-          className="text-2xl font-semibold text-white border-none p-0"
-        >
-          The Roadmap
+        {/* Intro copy matching the provided mock */}
+        <div className="space-y-2">
+          <h2 className="text-3xl font-semibold tracking-tight text-white">
+            Pushing for Big Change Together
+          </h2>
+          <p className="text-neutral-300 max-w-3xl text-sm md:text-base">
+            Lasting change takes teamwork at every level: local, regional, provincial, and national.
+            By joining forces, we can make a bigger impact.
+          </p>
+        </div>
+        <h3 id="roadmap-title" className="text-2xl font-semibold text-white p-0">
+          What we’re doing in 2025
         </h3>
         <RoadmapCanvas />
         <Legend />
