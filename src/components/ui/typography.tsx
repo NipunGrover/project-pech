@@ -1,106 +1,102 @@
-import { cn } from "@/lib/utils";
 import React from "react";
+import { cn } from "@/lib/utils";
 
-// Base prop sets for different element kinds
-type HeadingProps = React.HTMLAttributes<HTMLHeadingElement> & {
+interface TypographyProps {
+  children: React.ReactNode;
   className?: string;
-};
-type ParagraphProps = React.HTMLAttributes<HTMLParagraphElement> & {
-  className?: string;
-};
-type DivProps = React.HTMLAttributes<HTMLDivElement> & { className?: string };
-type SmallProps = React.HTMLAttributes<HTMLElement> & { className?: string };
-type BlockquoteProps = React.HTMLAttributes<HTMLElement> & {
-  className?: string;
-};
+}
 
-export function TypographyH1({ className, ...props }: HeadingProps) {
+export function Typography2XL({ children, className }: TypographyProps) {
   return (
     <h1
       className={cn(
-        "scroll-m-20 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight break-words [text-wrap:balance]",
+        "scroll-m-20 tracking-tight",
+        "text-[4.5rem] leading-[5.625rem]",
         className
       )}
-      {...props}
-    />
+    >
+      {children}
+    </h1>
   );
 }
 
-export function TypographyH2({ className, ...props }: HeadingProps) {
+export function TypographyH2({ children, className }: TypographyProps) {
   return (
     <h2
       className={cn(
         "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0",
         className
       )}
-      {...props}
-    />
+    >
+      {children}
+    </h2>
   );
 }
 
-export function TypographyH3({ className, ...props }: HeadingProps) {
+export function TypographyH3({ children, className }: TypographyProps) {
   return (
     <h3
       className={cn(
         "scroll-m-20 text-2xl font-semibold tracking-tight",
         className
       )}
-      {...props}
-    />
+    >
+      {children}
+    </h3>
   );
 }
 
-export function TypographyH4({ className, ...props }: HeadingProps) {
+export function TypographyH4({ children, className }: TypographyProps) {
   return (
     <h4
       className={cn(
         "scroll-m-20 text-xl font-semibold tracking-tight",
         className
       )}
-      {...props}
-    />
+    >
+      {children}
+    </h4>
   );
 }
 
-export function TypographyP({ className, ...props }: ParagraphProps) {
+export function TypographyP({ children, className }: TypographyProps) {
   return (
-    <p
-      className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
-      {...props}
-    />
+    <p className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}>
+      {children}
+    </p>
   );
 }
 
-export function TypographyLead({ className, ...props }: ParagraphProps) {
+export function TypographyLead({ children, className }: TypographyProps) {
   return (
-    <p className={cn("text-xl text-muted-foreground", className)} {...props} />
+    <p className={cn("text-xl text-muted-foreground", className)}>{children}</p>
   );
 }
 
-export function TypographyLarge({ className, ...props }: DivProps) {
-  return <div className={cn("text-lg font-semibold", className)} {...props} />;
-}
-
-export function TypographySmall({ className, ...props }: SmallProps) {
+export function TypographyLarge({ children, className }: TypographyProps) {
   return (
-    <small
-      className={cn("text-sm font-medium leading-none", className)}
-      {...props}
-    />
+    <div className={cn("text-lg font-semibold", className)}>{children}</div>
   );
 }
 
-export function TypographyMuted({ className, ...props }: ParagraphProps) {
+export function TypographySmall({ children, className }: TypographyProps) {
   return (
-    <p className={cn("text-sm text-muted-foreground", className)} {...props} />
+    <small className={cn("text-sm font-medium leading-none", className)}>
+      {children}
+    </small>
   );
 }
 
-export function TypographyBlockquote({ className, ...props }: BlockquoteProps) {
+export function TypographyMuted({ children, className }: TypographyProps) {
   return (
-    <blockquote
-      className={cn("mt-6 border-l-2 pl-6 italic", className)}
-      {...props}
-    />
+    <p className={cn("text-sm text-muted-foreground", className)}>{children}</p>
+  );
+}
+
+export function TypographyBlockquote({ children, className }: TypographyProps) {
+  return (
+    <blockquote className={cn("mt-6 border-l-2 pl-6 italic", className)}>
+      {children}
+    </blockquote>
   );
 }

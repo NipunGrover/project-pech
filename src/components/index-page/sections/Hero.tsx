@@ -1,13 +1,13 @@
 "use client";
 
 import { MapPin } from "lucide-react";
+import { BuildingIllustration } from "@/components/BuildingIllustration";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
-import { BuildingIllustration } from "@/components/BuildingIllustration";
 import {
-  TypographyH1,
+  Typography2XL,
   TypographyLead,
   TypographySmall,
 } from "@/components/ui/typography";
@@ -18,13 +18,13 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <TypographyH1 className="text-3xl sm:text-4xl lg:text-6xl text-white leading-tight break-words">
+            <Typography2XL className="text-5xl lg:text-6xl text-white leading-tight">
               The Plan
               <br />
               to End Chronic
               <br />
               Homelessness
-            </TypographyH1>
+            </Typography2XL>
             <TypographyLead className="text-gray-400 max-w-md">
               A collaborative roadmap for strategies, resources and timelines to
               end chronic homelessness in Waterloo Region

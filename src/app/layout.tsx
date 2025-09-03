@@ -1,7 +1,7 @@
-import "./globals.css";
 import { Geist } from "next/font/google";
-import { Header } from "@/components/index-page/sections/Header";
-import { Footer } from "@/components/index-page/sections/Footer";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import "./globals.css";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -14,14 +14,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geist.variable} dark antialiased`}>
-      <head>
-        {/* Ensure proper responsive behavior on mobile */}
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body className="antialiased overflow-x-hidden">
+    <html lang="en" className={`${geist.variable} antialiased`}>
+      <body className="antialiased">
         <Header />
-        {/* Offset main content for fixed header height (h-16) */}
         <main className="pt-16">{children}</main>
         <Footer />
       </body>
