@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Container } from "../../components/ui/container";
 import { Heading } from "../../components/ui/heading";
 import { Text } from "../../components/ui/text";
+import { HeaderCopyIllustration } from "./header-copy-illustration";
 
 export default function CoCreators() {
 	return (
@@ -21,7 +22,9 @@ export default function CoCreators() {
 								This plan was built by our community, for our community. Our co-creators include people with lived experience of homelessness, service providers, advocates, and local leaders. Each person brought their ideas, skills, and stories to help shape a plan that works for everyone in Waterloo Region.
 							</Text>
 						</div>
-						<div className="bg-brand-medium-green h-64 aspect-[4/3] rounded-lg" />
+						<div>
+							<HeaderCopyIllustration className="md:h-96 hidden md:block aspect-[4/3] rounded-lg" />
+						</div>
 					</div>
 				</Container>
 			</section>
@@ -32,7 +35,7 @@ export default function CoCreators() {
 
 			<Container size="6xl">
 				<section className="bg-brand-white py-20">
-					<div className="flex flex-col gap-4">
+					<div className="flex flex-col gap-6">
 
 						<Heading size="lg" className="text-brand-dark-green">About PECH</Heading>
 
