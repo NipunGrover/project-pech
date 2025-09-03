@@ -16,48 +16,12 @@ export const HeadingVariants = cva("m-0 font-semibold", {
 			"xl": "text-[3.75rem] leading-[4.5rem] tracking-[-0.02em]", // 60px / 72px
 			"2xl": "text-[4.5rem] leading-[5.625rem] tracking-[-0.02em]", // 72px / 90px
 		},
-		color: {
-			accent: "text-accent-11",
-			warning: "text-warning-11",
-			success: "text-success-11",
-			error: "text-error-11",
-			gray: "text-gray-11",
-		},
 		highContrast: {
 			true: "",
 			false: "",
 		},
 	},
-	compoundVariants: [
-		{
-			color: "gray",
-			highContrast: true,
-			className: "text-gray-12",
-		},
-		{
-			color: "accent",
-			highContrast: true,
-			className: "text-accent-12",
-		},
-		{
-			color: "warning",
-			highContrast: true,
-			className: "text-warning-12",
-		},
-		{
-			color: "success",
-			highContrast: true,
-			className: "text-success-12",
-		},
-		{
-			color: "error",
-			highContrast: true,
-			className: "text-error-12",
-		},
-	],
 	defaultVariants: {
-		size: "md",
-		color: "gray",
 		highContrast: false,
 	},
 });
@@ -78,7 +42,7 @@ const Heading: HeadingComponent = <C extends React.ElementType = "h2">(
 	const { asChild, size, color, highContrast, ...others } = props;
 
 	const className = cn(
-		HeadingVariants({ size, color, highContrast }),
+		HeadingVariants({ size, highContrast }),
 		(others as unknown as { className: string }).className,
 	);
 
