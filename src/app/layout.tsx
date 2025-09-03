@@ -15,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geist.variable} dark antialiased`}>
-      <body className="antialiased">
+      <head>
+        {/* Ensure proper responsive behavior on mobile */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
+      <body className="antialiased overflow-x-hidden">
         <Header />
         {/* Offset main content for fixed header height (h-16) */}
         <main className="pt-16">{children}</main>

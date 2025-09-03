@@ -18,7 +18,7 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
-            <TypographyH1 className="text-5xl lg:text-6xl text-white leading-tight">
+            <TypographyH1 className="text-3xl sm:text-4xl lg:text-6xl text-white leading-tight break-words">
               The Plan
               <br />
               to End Chronic
