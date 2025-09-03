@@ -1,76 +1,98 @@
-import { Card, CardContent } from "@/components/ui/card";
+"use server";
+
+import type { Profile } from "@/lib/directus";
+import Image from "next/image";
+import { Container } from "@/components/ui/container";
 import { TypographyH2 } from "@/components/ui/typography";
+import { getDirectusAssetUrl } from "@/lib/assets";
+import { directus, readItems } from "@/lib/directus";
+import { Heading } from "../ui/heading";
+import { Text } from "../ui/text";
 
-interface CoCreator {
-	id: string;
-	name: string;
-	description: string;
-	photo?: string;
-}
+async function getCoCreators(): Promise<Profile[]> {
+	try {
+		const coCreators = await directus.request(
+			readItems("profiles", {
+				filter: {
+					is_coordinator: { _eq: false },
+					status: { _eq: "published" },
+				},
+				fields: ["id", "display_name", "display_blurb", "profile_image", "status", "is_coordinator"],
+			}),
+		);
 
-async function getCoCreators(): Promise<CoCreator[]> {
-	// TODO: Replace with actual Directus API call
-	// For now, return placeholder data
-	return [
-		{
-			id: "1",
-			name: "Name",
-			description: "Description and view about creative creation involved in this journey, or in our historic respect.",
-		},
-		{
-			id: "2",
-			name: "Name",
-			description: "Description and view about creative creation involved in this journey, or in our historic respect.",
-		},
-		{
-			id: "3",
-			name: "Name",
-			description: "Description and view about creative creation involved in this journey, or in our historic respect.",
-		},
-		{
-			id: "4",
-			name: "Name",
-			description: "Description and view about creative creation involved in this journey, or in our historic respect.",
-		},
-		{
-			id: "5",
-			name: "Name",
-			description: "Description and view about creative creation involved in this journey, or in our historic respect.",
-		},
-		{
-			id: "6",
-			name: "Name",
-			description: "Description and view about creative creation involved in this journey, or in our historic respect.",
-		},
-	];
+		return coCreators.map((c) => {
+			return {
+				...c,
+				profile_image: c.profile_image ? getDirectusAssetUrl(c.profile_image) : undefined,
+			};
+		});
+	} catch (error) {
+		console.error("Failed to fetch co-creators:", error);
+		return [];
+	}
 }
 
 export default async function CoCreatorsList() {
 	const coCreators = await getCoCreators();
 
 	return (
-		<section className="bg-gray-900 text-white py-20">
-			<div className="max-w-7xl mx-auto px-4">
-				<TypographyH2 className="text-3xl font-bold mb-4 text-white">
-					Co-creators
-				</TypographyH2>
-				<p className="text-gray-300 max-w-2xl mb-16">
-					Looking for folks between all every level, local, regional, provincial, and
-					national across every single voice.
-				</p>
+		<section className="bg-brand-charcoal text-white py-20">
+			<Container size="6xl">
+				<div className="flex flex-col gap-4">
+					<Heading size="lg" className="font-bold">
+						Co-creators
+					</Heading>
+					<Text size="xl" className="font-semibold">
+						Lasting change takes teamwork at every level: local, regional, provincial, and national. By joining forces, we can make a bigger impact.
+					</Text>
+				</div>
 
-				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-x-8 gap-y-12">
 					{coCreators.map(creator => (
-						<Card key={creator.id} className="bg-white text-black">
-							<CardContent className="p-6">
-								<div className="w-16 h-16 bg-gray-300 rounded-full mb-4"></div>
-								<h3 className="text-lg font-semibold mb-2">{creator.name}</h3>
-								<p className="text-sm text-gray-600 mb-3">{creator.description}</p>
-							</CardContent>
-						</Card>
+						<div key={creator.id} className="flex flex-row gap-4">
+							<div
+								className="w-16 h-16 rounded-full mb-3 overflow-hidden relative"
+							>
+								{creator.profile_image
+									? (
+										<Image
+											src={creator.profile_image}
+											alt={creator.display_name}
+											fill
+											className="object-cover"
+										/>
+									)
+									: (
+										<div
+											className="w-full h-full bg-gray-500 flex items-center justify-center"
+										>
+											<span
+												className="text-white text-xl font-semibold"
+											>
+												{creator.display_name.charAt(0).toUpperCase()}
+											</span>
+										</div>
+									)}
+							</div>
+							<div className="flex flex-col">
+								<Text
+									size="md"
+									className="font-semibold"
+								>
+									{creator.display_name}
+								</Text>
+								<Text
+									size="sm"
+									className="text-brand-teal text-sm truncate max-w-20"
+								>
+									{creator.display_blurb}
+								</Text>
+							</div>
+						</div>
 					))}
 				</div>
-			</div>
+			</Container>
 		</section>
 	);
 }

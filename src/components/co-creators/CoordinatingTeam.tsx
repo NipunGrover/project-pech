@@ -1,9 +1,12 @@
+"use server";
+
 import type { Profile } from "@/lib/directus";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { TypographyH2 } from "@/components/ui/typography";
-import { getDirectusAssetUrlWithFallback } from "@/lib/assets";
+import { getDirectusAssetUrl } from "@/lib/assets";
 import { directus, readItems } from "@/lib/directus";
+import { Container } from "../ui/container";
 
 async function getCoordinatingTeam(): Promise<Profile[]> {
 	try {
@@ -17,7 +20,12 @@ async function getCoordinatingTeam(): Promise<Profile[]> {
 			}),
 		);
 
-		return coordinators;
+		return coordinators.map((c) => {
+			return {
+				...c,
+				profile_image: c.profile_image ? getDirectusAssetUrl(c.profile_image) : undefined,
+			};
+		});
 	} catch (error) {
 		console.error("Failed to fetch coordinating team:", error);
 		return [];
@@ -29,43 +37,43 @@ export default async function CoordinatingTeam() {
 
 	return (
 		<section className="bg-white py-20">
-			<div className="max-w-7xl mx-auto px-4">
-				<TypographyH2 className="text-3xl font-bold text-center mb-4 text-teal-600">
+			<Container size="6xl">
+				<TypographyH2 className="font-semibold mb-4 text-brand-dark-teal">
 					Coordinating team
 				</TypographyH2>
-				<p className="text-gray-600 text-center max-w-2xl mx-auto mb-16">
-					Our coordination team brings together program leads who have experience
-					across sectors. Together, they guide this work in coordination
-					with community voices.
+				<p className="text-gray-600 mb-16">
+					Our coordinating team brings together people with many skills and experiences. Together, they guide the work to end chronic homelessness in Waterloo Region.
 				</p>
 
-				<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{teamMembers.map(member => (
-						<Card key={member.id} className="text-center">
-							<CardContent className="pt-6">
-								{(() => {
-									const imageUrl = getDirectusAssetUrlWithFallback(member.profile_image);
-									return imageUrl
-										? (
-											<Image
-												src={imageUrl}
-												alt={member.display_name}
-												width={96}
-												height={96}
-												className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
-											/>
-										)
-										: (
-											<div className="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4"></div>
-										);
-								})()}
+						<Card key={member.id} className="pt-0 rounded-sm overflow-hidden">
+							<div className="relative h-36 w-full">
+								{member.profile_image
+									? (
+										<Image
+											src={member.profile_image}
+											alt={member.display_name}
+											fill
+											className="object-cover object-[center_20%]"
+										/>
+									)
+									: (
+										<div className="w-full h-full bg-brand-teal flex items-center justify-center">
+											<span className="text-white text-5xl font-semibold">
+												{member.display_name.charAt(0).toUpperCase()}
+											</span>
+										</div>
+									)}
+							</div>
+							<CardContent className="pt-0">
 								<h3 className="text-lg font-semibold mb-2">{member.display_name}</h3>
 								<p className="text-sm text-gray-600">{member.display_blurb}</p>
 							</CardContent>
 						</Card>
 					))}
 				</div>
-			</div>
+			</Container>
 		</section>
 	);
 }
