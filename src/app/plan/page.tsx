@@ -16,8 +16,6 @@ export default function PlanPage() {
     <>
       <PlanHero />
       <PlanOverview />
-      <PlanGetInvolved />
-      <PlanFAQ />
       <PlanPhases />
     </>
   );

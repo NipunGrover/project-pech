@@ -69,7 +69,8 @@ function FocusAreaCard({
       className={cn(
         v.card,
         "rounded-lg shadow-sm transition-all duration-[225ms] md:hover:scale-[1.02] cursor-pointer",
-        "aspect-[1.3/1] active:scale-[0.98]",
+        // Make card portrait: height ~1.3x width
+        "aspect-[1/1.3] active:scale-[0.98]",
         isClicked && "scale-[0.98]"
       )}
       onClick={handleClick}
@@ -161,6 +162,16 @@ function FocusAreaModal({
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
 
+    // Maintain same aspect ratio as cards (height = 1.3 * width)
+    const RATIO = 1.3; // H = W * 1.3
+
+    // Target modal size should fit viewport while keeping ratio and a max width ~2xl (672px)
+    const maxViewportWidth = viewportWidth * 0.9;
+    const maxViewportHeight = viewportHeight * 0.9;
+    const maxWidthByHeight = maxViewportHeight / RATIO;
+    const targetWidth = Math.min(672, maxViewportWidth, maxWidthByHeight);
+    const targetHeight = Math.min(targetWidth * RATIO, maxViewportHeight);
+
     // Calculate modal's final position (center of viewport)
     const modalFinalX = viewportWidth / 2;
     const modalFinalY = viewportHeight / 2;
@@ -173,18 +184,29 @@ function FocusAreaModal({
     const offsetX = cardCenterX - modalFinalX;
     const offsetY = cardCenterY - modalFinalY;
 
-    // Target modal dimensions
-    const targetWidth = Math.min(600, viewportWidth * 0.9);
-    const targetHeight = Math.min(400, viewportHeight * 0.9);
-
     // Calculate scale factors
     const scaleX = originRect.width / targetWidth;
     const scaleY = originRect.height / targetHeight;
 
     return {
       transformOrigin: "center center",
+      width: targetWidth,
+      height: targetHeight,
       transform: `translate(calc(-50% + ${offsetX}px), calc(-50% + ${offsetY}px)) scale(${scaleX}, ${scaleY})`,
     };
+  };
+
+  // Provide width/height even after animation enters to avoid height jump
+  const getFinalDimensions = () => {
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const RATIO = 1.3;
+    const maxViewportWidth = viewportWidth * 0.9;
+    const maxViewportHeight = viewportHeight * 0.9;
+    const maxWidthByHeight = maxViewportHeight / RATIO;
+    const targetWidth = Math.min(672, maxViewportWidth, maxWidthByHeight);
+    const targetHeight = Math.min(targetWidth * RATIO, maxViewportHeight);
+    return { width: targetWidth, height: targetHeight } as const;
   };
 
   return (
@@ -202,11 +224,15 @@ function FocusAreaModal({
       <div
         ref={modalRef}
         className={cn(
-          "absolute top-1/2 left-1/2 w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl shadow-2xl",
+          // Fixed dimensions based on viewport with the same ratio as card
+          "absolute top-1/2 left-1/2 w-auto max-w-2xl max-h-[90vh] overflow-y-auto rounded-xl shadow-2xl",
           getTransformClasses(),
           v.card
         )}
-        style={getInitialTransform()}
+        style={{
+          ...(animationState === "entered" ? getFinalDimensions() : {}),
+          ...getInitialTransform(),
+        }}
       >
         {/* Close button */}
         <button
