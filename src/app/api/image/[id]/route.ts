@@ -1,5 +1,12 @@
-export async function GET(_request: Request, { params }: { params: { id: string } }) {
-	const { id } = params;
+import type { NextRequest } from "next/server";
+
+export async function GET(_req: NextRequest, ctx: { params: Promise<{ id: string }> }) {
+	const { id } = await ctx.params;
+
+	if (!id) {
+		return new Response("Missing image id", { status: 400 });
+	}
+
 	const token = process.env.DIRECTUS_TOKEN; // eslint-disable-line node/prefer-global/process
 
 	try {
