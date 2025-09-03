@@ -68,7 +68,9 @@ function FocusAreaCard({
       ref={cardRef}
       className={cn(
         v.card,
-        "rounded-lg shadow-sm transition-all duration-[225ms] md:hover:scale-[1.02] cursor-pointer",
+        // Avoid horizontal clipping on wide columns by removing hover scale.
+        // Use lift + shadow instead of grow to keep width stable near viewport edges.
+        "rounded-lg shadow-sm transition-transform duration-[225ms] md:hover:-translate-y-0.5 md:hover:shadow-md cursor-pointer",
         // Make card portrait: height ~1.3x width
         "aspect-[1/1.3] active:scale-[0.98]",
         isClicked && "scale-[0.98]"
