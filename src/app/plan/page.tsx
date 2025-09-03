@@ -1,24 +1,24 @@
+import type { Metadata } from "next";
 import { PlanHero } from "@/components/plan-page/sections/PlanHero";
+import PlanHowYouCanHelp from "@/components/plan-page/sections/PlanHowYouCanHelp";
+import PlanLookingAhead from "@/components/plan-page/sections/PlanLookingAhead";
 import { PlanOverview } from "@/components/plan-page/sections/PlanOverview";
 import PlanPhases from "@/components/plan-page/sections/PlanPhases";
-import PlanLookingAhead from "@/components/plan-page/sections/PlanLookingAhead";
-import PlanHowYouCanHelp from "@/components/plan-page/sections/PlanHowYouCanHelp";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Plan",
-  description:
+	title: "The Plan",
+	description:
     "The Plan to End Chronic Homelessness is Waterloo Region's roadmap to make sure everyone has a safe, stable home. It was created with input from people with lived experience, service providers, community groups, and local government.",
 };
 
 export default function PlanPage() {
-  return (
-    <>
-      <PlanHero />
-      <PlanOverview />
-      <PlanPhases />
-      <PlanLookingAhead />
-      <PlanHowYouCanHelp />
-    </>
-  );
+	return (
+		<>
+			<PlanHero />
+			<PlanOverview />
+			<PlanPhases />
+			<PlanLookingAhead />
+			<PlanHowYouCanHelp />
+		</>
+	);
 }
