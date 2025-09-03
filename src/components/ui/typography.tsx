@@ -6,9 +6,14 @@ interface TypographyProps {
 	className?: string;
 }
 
-export function TypographyH1({ children, className }: TypographyProps) {
+export function Typography2XL({ children, className }: TypographyProps) {
 	return (
-		<h1 className={cn("scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl", className)}>
+		<h1 className={cn(
+			"scroll-m-20 tracking-tight",
+			"text-[4.5rem] leading-[5.625rem]",
+			className,
+		)}
+		>
 			{children}
 		</h1>
 	);
