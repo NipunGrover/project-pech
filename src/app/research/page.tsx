@@ -134,7 +134,7 @@ export default function ResearchPage() {
 								Our housing system is like a tower with missing blocks: it can't hold everyone up. As we face  more challenges, the whole structure becomes shaky.
 							</Text>
 						</div>
-						<div className="flex justify-center">
+						<div className="flex justify-end">
 							<ResearchHeaderCopyIllustration className="md:h-96 md:w-64 hidden md:block rounded-lg " />
 						</div>
 					</div>

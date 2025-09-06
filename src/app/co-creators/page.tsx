@@ -15,7 +15,7 @@ export default function CoCreators() {
 				<Container size="6xl">
 					<div className="grid lg:grid-cols-2 gap-12 items-center">
 						<div className="flex flex-col gap-4">
-							<Heading size="xl" className="font-semibold">
+							<Heading size="2xl" className="font-semibold">
 								Meet the co-creators
 							</Heading>
 							<Text size="xl">
