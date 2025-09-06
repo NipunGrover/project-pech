@@ -141,14 +141,13 @@ export default function HelpPage() {
 								size="lg"
 								className={cn(
 									"text-brand-dark-green",
-
 								)}
 							>
 								📞 519-883-2280
 							</Text>
 						</Link>
 						<Text as="span" size="lg" className="text-brand-dark-green">
-							Call Region of Waterloo Housing Services
+							Call Region of Waterloo Housing Services.
 						</Text>
 					</div>
 
