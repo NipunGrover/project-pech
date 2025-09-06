@@ -25,7 +25,7 @@ export function Header() {
 		{ href: "/plan", label: "The Plan" },
 		{ href: "/data", label: "Data & Trends" },
 		{ href: "/co-creators", label: "Co-creator space" },
-		{ href: "/about", label: "About" },
+		{ href: "/research", label: "Research" },
 	];
 
 	return (
