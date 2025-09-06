@@ -21,7 +21,7 @@ export default function HelpPage() {
 						"py-16",
 					)}
 				>
-					<div className="max-w-xl">
+					<div className="max-w-xl flex flex-col gap-4">
 						<Heading size="2xl">
 							Get help now
 						</Heading>
@@ -109,7 +109,7 @@ export default function HelpPage() {
 				/>
 				<div className="max-w-xl text-brand-black flex flex-col gap-4">
 					<Heading size="lg">
-						If You Are at Risk of Losing Your Housings
+						If You Are at Risk of Losing Your Housing
 					</Heading>
 					<div className="flex flex-col gap-2">
 						<Text size="lg">
@@ -146,7 +146,7 @@ export default function HelpPage() {
 							</Text>
 						</Link>
 						<Text as="span" size="lg" className="text-brand-dark-green">
-							Call the Region of Waterloo Housing Services
+							Call Region of Waterloo Housing Services
 						</Text>
 					</div>
 
