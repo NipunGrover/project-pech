@@ -16,7 +16,7 @@ export function PersonHoldingBabyWithHouseIllustration(props: PersonHoldingBabyW
 			<path d="M60.5 112C93.9132 112 121 86.928 121 56C121 25.0721 93.9132 0 60.5 0C27.0868 0 0 25.0721 0 56C0 86.928 27.0868 112 60.5 112Z" fill="#F5F4ED" />
 			<path d="M188.933 89.1729H180.924V95.8964H189.661V89.1729H188.933Z" fill="#095A5A" />
 			<rect x="29.0146" y="75.4446" width="146.012" height="102.663" fill="#095A5A" />
-			<path d="M66.8574 48L27 75.4445L172.005 74.5447L144.674 48H66.8574Z" fill="#1E968C" stroke="#1E968C" stroke-width="5" />
+			<path d="M66.8574 48L27 75.4445L172.005 74.5447L144.674 48H66.8574Z" fill="#1E968C" stroke="#1E968C" strokeWidth="5" />
 			<path d="M29.0146 77.1756L68.5436 51.0494L106.552 77.1756V178.107H29.0146V77.1756Z" fill="#71C6AC" />
 			<rect width="19.1326" height="17.2799" transform="matrix(1 0 0 -1 46.1338 119.152)" fill="#FAFAFA" />
 			<rect width="19.1326" height="17.2799" transform="matrix(1 0 0 -1 46.1338 153.712)" fill="#FAFAFA" />
