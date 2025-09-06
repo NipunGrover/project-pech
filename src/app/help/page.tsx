@@ -51,8 +51,9 @@ export default function HelpPage() {
 						If You Need Emergency Shelter
 					</Heading>
 					<div className={cn(
-						"border border-solid border-brand-medium-green",
-						"rounded-md p-2 flex gap-2 items-center",
+						"md:border md:border-solid md:border-brand-medium-green",
+						"rounded-md p-2 flex gap-2",
+						"md:items-center items-start flex-wrap",
 					)}
 					>
 						<Link
@@ -122,8 +123,9 @@ export default function HelpPage() {
 						</ul>
 					</div>
 					<div className={cn(
-						"border border-solid border-brand-medium-green",
-						"rounded-md p-2 flex gap-2 items-center",
+						"md:border md:border-solid md:border-brand-medium-green",
+						"rounded-md p-2 flex gap-2",
+						"md:items-center items-start flex-wrap",
 					)}
 					>
 						<Link
