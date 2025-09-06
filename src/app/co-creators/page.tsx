@@ -23,7 +23,7 @@ export default function CoCreators() {
 							</Text>
 						</div>
 						<div>
-							<HeaderCopyIllustration className="md:h-96 hidden md:block aspect-[4/3] rounded-lg" />
+							<HeaderCopyIllustration className="md:h-96 md:w-150 hidden md:block aspect-[4/3] rounded-lg" />
 						</div>
 					</div>
 				</Container>
@@ -34,7 +34,7 @@ export default function CoCreators() {
 			<CoCreatorsList />
 
 			<Container size="6xl">
-				<section className="bg-brand-white py-20">
+				<section className="py-20">
 					<div className="flex flex-col gap-6">
 
 						<Heading size="lg" className="text-brand-dark-green">About PECH</Heading>
