@@ -12,7 +12,7 @@ export default function CoCreators() {
 		<div className="min-h-screen">
 			{/* Hero Section */}
 			<section className="bg-brand-black text-white py-20">
-				<Container size="6xl">
+				<Container size="6xl" className="overflow-hidden">
 					<div className="grid lg:grid-cols-2 gap-12 items-center">
 						<div className="flex flex-col gap-4">
 							<Heading size="2xl" className="font-semibold">
@@ -23,7 +23,7 @@ export default function CoCreators() {
 							</Text>
 						</div>
 						<div>
-							<HeaderCopyIllustration className="md:h-96 md:w-150 hidden md:block aspect-[4/3] rounded-lg" />
+							<HeaderCopyIllustration className="md:h-60 md:w-72 lg:h-96 lg:w-150 hidden lg:block aspect-[4/3] rounded-lg" />
 						</div>
 					</div>
 				</Container>
