@@ -59,13 +59,13 @@ export default function HelpPage() {
 							href="tel:519-624-9133"
 							className={cn(
 								"text-brand-medium-green bg-brand-yellow",
-								"p-2 rounded-md",
+								"p-1 rounded-md",
 								"border border-solid border-brand-medium-green",
 							)}
 						>
 							<Text
 								as="span"
-								size="xl"
+								size="lg"
 								className={cn(
 									"text-brand-dark-green",
 
@@ -74,7 +74,7 @@ export default function HelpPage() {
 								📞 519-624-9133
 							</Text>
 						</Link>
-						<Text as="span" size="xl" className="text-brand-dark-green">
+						<Text as="span" size="lg" className="text-brand-dark-green">
 							Call First Connect anytime, day or night.
 						</Text>
 					</div>
