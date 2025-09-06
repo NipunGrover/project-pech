@@ -1,9 +1,6 @@
+import type { VariantProps } from "class-variance-authority";
 import { cva } from "class-variance-authority";
 import React from "react";
-
-export interface HumanIllustrationProps extends React.ComponentProps<"svg"> {
-	variant: "brand-dark-green" | "brand-dark-green-lighter" | "brand-grey";
-}
 
 const humanIllustrationPathVariants = cva("", {
 	variants: {
@@ -11,9 +8,13 @@ const humanIllustrationPathVariants = cva("", {
 			"brand-dark-green": "fill-brand-dark-green",
 			"brand-dark-green-lighter": "fill-brand-dark-green-lighter",
 			"brand-grey": "fill-brand-grey",
+			"brand-medium-green": "fill-brand-medium-green",
 		},
 	},
 });
+export interface HumanIllustrationProps extends VariantProps<typeof humanIllustrationPathVariants>, React.ComponentProps<"svg"> {
+
+}
 
 export function HumanIllustration({ ...props }: HumanIllustrationProps) {
 	return (

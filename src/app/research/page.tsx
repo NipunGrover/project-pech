@@ -142,9 +142,9 @@ export default function ResearchPage() {
 
 			</section>
 			<div className="relative overflow-hidden">
-				<div className="absolute hidden lg:block top-[-80px] right-[-550px]">
+				<div className="absolute top-[-80px] right-[-600px] lg:right-[-550px]">
 					<BuildingIllustration
-						className="h-[1792px]"
+						className="h-[1792px] opacity-10 lg:opacity-100"
 					/>
 				</div>
 				<Container size="6xl" className="py-20 ">
@@ -154,7 +154,7 @@ export default function ResearchPage() {
 							<Heading as="h3" size="lg" className="text-brand-dark-green">
 								We've Got Cracks in Our System
 							</Heading>
-							<Text size="lg" className="text-brand-grey">
+							<Text size="md" className="text-brand-grey">
 								To make sure our system does not topple over, we have to build a better foundation that supports all of our needs. We've got cracks in our system.
 							</Text>
 						</section>
@@ -167,7 +167,7 @@ export default function ResearchPage() {
 								<div className="flex gap-4">
 									{[...Array.from({ length: 10 })].map((_, index) => (
 										<HumanIllustration
-											variant={index === 0 ? "brand-dark-green" : "brand-grey"}
+											variant={index === 0 ? "brand-medium-green" : "brand-grey"}
 											// eslint-disable-next-line react/no-array-index-key
 											key={`human-${index}`}
 										/>
@@ -175,7 +175,7 @@ export default function ResearchPage() {
 								</div>
 								<div className="flex flex-row gap-4">
 									<div className="flex flex-row gap-2 items-center">
-										<div className="h-4 w-4 rounded-full bg-brand-dark-green"></div>
+										<div className="h-4 w-4 rounded-full bg-brand-medium-green"></div>
 										<Text size="md" className="text-brand-grey">
 											Homelessness
 										</Text>
@@ -218,9 +218,9 @@ export default function ResearchPage() {
 							<BlockIllustration
 								className={cn(
 									"absolute top-0 right-35",
-									"hidden lg:block",
+									"hidden xl:block",
 									"rotate-[-17.5deg]",
-									"scale-150",
+									"scale-125",
 								)}
 							/>
 						</div>
@@ -267,9 +267,9 @@ export default function ResearchPage() {
 							<BlockIllustration
 								className={cn(
 									"absolute top-20 right-35",
-									"hidden lg:block",
+									"hidden xl:block",
 									"rotate-[30deg]",
-									"scale-150",
+									"scale-125",
 								)}
 							/>
 						</div>
@@ -278,7 +278,7 @@ export default function ResearchPage() {
 								<Heading as="p" size="md" className="text-brand-grey">
 									Gender-based violence is a cause of almost half (45%) of family homelessness cases.
 								</Heading>
-								<Text size="xl" className="text-brand-grey">
+								<Text size="md" className="text-brand-grey">
 									In local research, 83% of women said they stayed in an abusive housing situation because it felt safer than being unhoused. This is called hidden homelessness.
 									{" "}
 									<Link
@@ -288,7 +288,7 @@ export default function ResearchPage() {
 										[LINK]
 									</Link>
 								</Text>
-								<Text size="xl" className="text-brand-grey">
+								<Text size="md" className="text-brand-grey">
 									Youth on the margins: a region-wide survey in 2023, found that 13% of young people had experienced homelessness.
 									{" "}
 									<Link
@@ -302,9 +302,9 @@ export default function ResearchPage() {
 							<BlockIllustration
 								className={cn(
 									"absolute top-20 right-50",
-									"hidden lg:block",
+									"hidden xl:block",
 									"rotate-[-120deg]",
-									"scale-150",
+									"scale-125",
 								)}
 							/>
 						</div>
@@ -337,7 +337,7 @@ export default function ResearchPage() {
 										</div>
 									</div>
 								</div>
-								<Text size="xl" className="text-brand-grey">
+								<Text size="md" className="text-brand-grey">
 									There is no rent control for housing built after 2018, so we are losing affordable housing. As one lived expert said: “Affordable housing means rent control. People on fixed incomes can't handle big rent increases without harming their health.”
 									{" "}
 									<Link
@@ -352,23 +352,23 @@ export default function ResearchPage() {
 							<BlockIllustration
 								className={cn(
 									"absolute top-20 right-30",
-									"hidden lg:block",
+									"hidden xl:block",
 									"rotate-[60deg]",
-									"scale-150",
+									"scale-125",
 								)}
 							/>
 						</div>
-						<section className="flex flex-row items-center space-between">
+						<section className="flex flex-row items-center flex-wrap xl:flex-nowrap space-between">
 							<div className="flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
 									Even with shelters and housing supports, many people can't find a safe place that meets their needs.
 								</Heading>
-								<Text size="xl" className="text-brand-grey">
+								<Text size="md" className="text-brand-grey">
 									Shelter spaces are often for specific groups, which leaves gaps for couples, 2SLGBTQ+ people, and those with pets. Rising rents, low incomes that can't keep up with the cost of living, and the loss of deeply affordable and therapeutic housing has damaged our whole housing system...
 								</Text>
 							</div>
 							<div>
-								<FallenBlocksIllustration className="w-128 h-84" />
+								<FallenBlocksIllustration className="w-72 h-42 lg:w-128 lg:h-84" />
 							</div>
 						</section>
 					</div>
@@ -380,7 +380,7 @@ export default function ResearchPage() {
 						<Heading as="h3" size="md">
 							We're Changing the System
 						</Heading>
-						<Text size="xl">
+						<Text size="md">
 							It is time to rebuild our system to create something more resilient and transformed, or even a new kind of structure, rather than trying to force pieces to fit where they no longer make sense.
 						</Text>
 					</div>
@@ -398,7 +398,7 @@ export default function ResearchPage() {
 						})}
 					</div>
 
-					<div className="flex flex-row gap-8 items-center">
+					<div className="flex flex-row gap-8 items-center flex-wrap lg:flex-nowrap">
 						<div>
 							<div className="flex flex-col gap-8">
 								<Heading as="h3" size="sm" className="font-medium">
@@ -410,8 +410,8 @@ export default function ResearchPage() {
 							</div>
 						</div>
 
-						<div>
-							<HouseIllustration className="w-120 h-120" />
+						<div className="flex justify-center items-center w-full lg:block lg:justify-start lg:w-auto">
+							<HouseIllustration className="w-60 h-60 lg:w-120 lg:h-120" />
 						</div>
 
 					</div>
@@ -422,7 +422,7 @@ export default function ResearchPage() {
 					<Heading as="h3" size="lg" className="text-brand-dark-green font-bold">
 						Be Part of the Solution
 					</Heading>
-					<Text size="xl" className="font-semibold text-brand-grey">
+					<Text size="md" className="font-semibold text-brand-grey">
 						Ending chronic homelessness takes all of us. Learn more about the Plan, share what you know, and speak up for safe, affordable housing in Waterloo Region.
 					</Text>
 					<Link
