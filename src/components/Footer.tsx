@@ -32,7 +32,7 @@ export function Footer() {
 
 				<div className="mt-8 pt-8 border-t border-zinc-800 text-center">
 					<TypographySmall className="text-gray-500">
-						©
+
 						{" "}
 						{new Date().getFullYear()}
 						{" "}
