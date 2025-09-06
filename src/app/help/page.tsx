@@ -207,7 +207,7 @@ export default function HelpPage() {
 									211ontario.ca
 								</Link>
 								{" "}
-								to find community programs, food banks, and support services
+								to find community programs, food banks, and support.
 							</CardContent>
 						</Card>
 						<Card className="w-fit gap-2 bg-brand-yellow">
