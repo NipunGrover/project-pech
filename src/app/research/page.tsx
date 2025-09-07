@@ -414,7 +414,7 @@ export default function ResearchPage() {
 							We're changing the system
 						</Heading>
 						<Text size="md">
-							It is time to rebuild our system to create something more resilient and transformed, or even a new kind of structure, rather than trying to force pieces to fit where they no longer make sense.
+							It is time to transform our system rather than trying to force pieces to fit where they no longer make sense. We're building a stronger foundation.
 						</Text>
 					</div>
 
