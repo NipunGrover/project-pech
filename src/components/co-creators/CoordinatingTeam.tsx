@@ -3,9 +3,9 @@
 import type { Profile } from "@/lib/directus";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { Text } from "@/components/ui/text";
 import { getDirectusAssetUrl } from "@/lib/assets";
 import { directus, readItems } from "@/lib/directus";
+import { Heading } from "../../components/ui/heading";
 import { Container } from "../ui/container";
 
 async function getCoordinatingTeam(): Promise<Profile[]> {
@@ -38,9 +38,9 @@ export default async function CoordinatingTeam() {
 	return (
 		<section className="bg-white py-20">
 			<Container size="6xl">
-				<Text className="font-semibold mb-4 text-brand-dark-green lg">
+				<Heading as="h3" size="lg" className="text-brand-dark-green mb-5">
 					Coordinating team
-				</Text>
+				</Heading>
 				<p className="text-gray-600 mb-16">
 					Our coordinating team brings together people with many skills and experiences. Together, they guide the work to end chronic homelessness in Waterloo Region.
 				</p>

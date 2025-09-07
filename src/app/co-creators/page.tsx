@@ -58,12 +58,6 @@ export default function CoCreators() {
 							>
 								The voices of people with lived experience are central to this work. The Plan is created with the community, by the community, and for the community.
 							</Text>
-							<Text
-								size="xl"
-								className="font-semibold text-brand-grey max-w-3xl"
-							>
-								On this site, you can discover about the Plan, explore data on homelessness, find housing and safety resources, and learn how to get involved.
-							</Text>
 							<div className="flex-shrink-0 w-64 h-64">
 								<Image
 									alt="Logo of the PECH organization"
