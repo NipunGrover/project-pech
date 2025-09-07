@@ -166,7 +166,7 @@ export default function ResearchPage() {
 									<ExternalLink href="https://www.amo.on.ca/sites/default/files/assets/DOCUMENTS/Reports/2025/2025-01-08-EndingChronicHomelessnessinOntario.pdf" className="text-brand-medium-green">
 										More than half
 									</ExternalLink>
-									of all known homelessness in Ontario is chronic
+									of all known homelessness in Ontario is chronic.
 								</Heading>
 								<div className="flex gap-4">
 									{[...Array.from({ length: 10 })].map((_, index) => (
@@ -284,7 +284,7 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									45% of family homelessness cases caused by gender-based violence
+									45% of family homelessness cases are caused by gender-based violence.
 								</Heading>
 								<Text size="md" className="text-brand-grey">
 									In local research,
@@ -320,7 +320,7 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-12">
 								<Heading as="p" size="md" className="text-brand-grey">
-									High rent and low-income contributes to housing loss.
+									High rent and low-income support contributes to housing loss.
 								</Heading>
 								<div className="flex justify-evenly items-center gap-4">
 									<div className="flex flex-col gap-2 items-center">
