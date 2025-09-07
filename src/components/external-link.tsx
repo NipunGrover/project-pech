@@ -10,9 +10,9 @@ export type ExternalLinkProps = React.ComponentPropsWithRef<"a"> & LinkProps & {
 
 export function ExternalLink({ children, ...rest }: ExternalLinkProps) {
 	return (
-		<Link {...rest} className={cn("inline align-middle", rest.className)}>
+		<Link {...rest} className={cn("inline leading-[inherit] whitespace-normal break-words", rest.className)}>
 			<span className="break-words">{children}</span>
-			<ExternalLinkIcon className="h-4 w-4 inline-block ml-1 align-text-top" />
+			<ExternalLinkIcon className="h-[1em] w-[1em] inline-block ml-1 align-middle -translate-y-[0.15em]" />
 		</Link>
 	);
 }
