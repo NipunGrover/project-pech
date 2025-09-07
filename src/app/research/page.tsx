@@ -162,12 +162,12 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-2xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									More than half of all homelessness in Ontario
+									More than half of all known homelessness in Ontario is chronic
 								</Heading>
 								<div className="flex gap-4">
 									{[...Array.from({ length: 10 })].map((_, index) => (
 										<HumanIllustration
-											variant={index === 0 ? "brand-medium-green" : "brand-grey"}
+											variant={index < 5 ? "brand-medium-green" : "brand-grey"}
 											// eslint-disable-next-line react/no-array-index-key
 											key={`human-${index}`}
 										/>
@@ -177,13 +177,13 @@ export default function ResearchPage() {
 									<div className="flex flex-row gap-2 items-center">
 										<div className="h-4 w-4 rounded-full bg-brand-medium-green"></div>
 										<Text size="md" className="text-brand-grey">
-											Unhoused
+											Chronically Unhoused
 										</Text>
 									</div>
 									<div className="flex flex-row gap-2 items-center">
 										<div className="h-4 w-4 rounded-full bg-brand-grey"></div>
 										<Text size="md" className="text-brand-grey">
-											Housed
+											Unhoused
 										</Text>
 									</div>
 								</div>
