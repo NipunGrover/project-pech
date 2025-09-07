@@ -344,7 +344,7 @@ export default function ResearchPage() {
 									</div>
 								</div>
 								<Text size="md" className="text-brand-grey">
-									Rising rents disproportionately impacts people with disabilities.
+									Rising rents and disproportionately impacts people with disabilities.
 								</Text>
 								<Text size="md" className="text-brand-grey">
 									There is no rent control for housing built after 2018, so we are losing affordable housing. As one lived expert said:
@@ -366,16 +366,38 @@ export default function ResearchPage() {
 								)}
 							/>
 						</div>
+						<div className="relative">
+							<section className="max-w-xl flex flex-col gap-8">
+								<Heading as="p" size="md" className="text-brand-grey">
+									We don't have enough shelter beds or transitional housing units.
+								</Heading>
+								<Text size="md" className="text-brand-grey">
+									Many unhoused people can't find a safe space that meets their needs; shelter spaces often have rules about who can stay, which leaves gaps for couples, 2SLGBTQ+ people, and those with pets.
+								</Text>
+								<Text size="md" className="text-brand-grey">
+									This leaves people with no choice but to live outside. 41% of people counted as experiencing homelessness in Waterloo Region in 2024 were living rough.
+								</Text>
+							</section>
+							<BlockIllustration
+								className={cn(
+									"absolute top-0 right-35",
+									"hidden xl:block",
+									"rotate-[-17.5deg]",
+									"scale-125",
+								)}
+							/>
+						</div>
+
 						<section className="flex flex-row items-center flex-wrap xl:flex-nowrap space-between">
 							<div className="flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									We don't have enough shelter spots, transitional housing, or supportive housing. Many people can't find a safe space that meets their needs.
+									There is a long waiting list for subsidized housing in Waterloo Region.
 								</Heading>
 								<Text size="md" className="text-brand-grey">
-									Shelter spaces often have rules about who can stay, which leaves gaps for couples, 2SLGBTQ+ people, and those with pets.
+									The number of people on the waiting list for subsidized housing increased by 44 per cent in Waterloo Region between 2020 and 2023.
 								</Text>
 								<Text size="md" className="text-brand-grey">
-									From the beginning of the pandemic in 2020 to June 2023, the number of people on the waiting list for subsidized housing increased by 44 per cent.
+									A shortage of subsidized housing, along with rising rents and income that can't keep up with the cost of living has put even more pressure on a system under strain.
 								</Text>
 							</div>
 							<div>
