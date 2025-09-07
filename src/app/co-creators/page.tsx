@@ -36,7 +36,7 @@ export default function CoCreators() {
 
 			<Container size="6xl">
 				<section className="py-20">
-					<div className="flex flex-row flex-wrap md:flex-nowrap items-center">
+					<div className="flex flex-row flex-wrap md:flex-nowrap gap-4 md:gap-0 items-center">
 						<div className="flex flex-col gap-6">
 
 							<Heading size="lg" className="text-brand-dark-green">About PECH</Heading>
