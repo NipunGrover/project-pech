@@ -188,14 +188,13 @@ export default function ResearchPage() {
 									</div>
 								</div>
 								<Text size="md" className="text-brand-grey">
-									Since 2020, chronic homelessness has grown by
+									Since 2020, chronic homelessness in Waterloo Region has grown by
 									{" "}
 									<Link href="https://waterlooregion.org/sites/default/files/PECHKeyFindingsReport_DRAFT.pdf" className="text-brand-medium-green">
 										<strong>28%</strong>
 										{" "}
 										each year
 										{" "}
-										.
 									</Link>
 									.
 								</Text>
