@@ -38,7 +38,7 @@ export default async function CoordinatingTeam() {
 	return (
 		<section className="bg-white py-20">
 			<Container size="6xl">
-				<Text className="font-semibold mb-4 text-brand-dark-green">
+				<Text className="font-semibold mb-4 text-brand-dark-green lg">
 					Coordinating team
 				</Text>
 				<p className="text-gray-600 mb-16">
