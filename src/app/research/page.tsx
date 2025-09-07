@@ -214,6 +214,10 @@ export default function ResearchPage() {
 									{" "}
 									available, many had to live outside or sleep in cars.
 								</Text>
+								<Text size="md" className="text-brand-grey">
+									Some people may not have been counted by service providers if they were unsheltered, unsafely housed, or couch-surfing. This is known as hidden homelessness.
+									It also means there could be many more people experiencing homelessness than counted by our system.
+								</Text>
 							</section>
 							<BlockIllustration
 								className={cn(
