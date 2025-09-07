@@ -39,7 +39,7 @@ export default function CoCreators() {
 
 						<Heading size="lg" className="text-brand-dark-green">About PECH</Heading>
 
-						<div className="flex flex-row gap-8 flex-wrap items-center">
+						<div className="flex flex-row gap-4 flex-wrap items-center">
 							<Text
 								size="xl"
 								className="font-semibold text-brand-grey max-w-3xl"

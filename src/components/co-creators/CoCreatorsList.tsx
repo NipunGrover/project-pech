@@ -43,7 +43,7 @@ export default async function CoCreatorsList() {
 						Co-Creators
 					</Heading>
 					<Text size="xl" className="font-semibold">
-						Lasting change takes teamwork at every level: local, regional, provincial, and national. By joining forces, we can make a bigger impact.
+						Lasting change takes teamwork: lived experience experts, community advocates, our services, and all levels of government. By joining forces, we can make a bigger impact.
 					</Text>
 				</div>
 
