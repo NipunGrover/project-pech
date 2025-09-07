@@ -20,7 +20,7 @@ export default function CoCreators() {
 								Meet the Co-Creators
 							</Heading>
 							<Text size="xl">
-								This plan was built by our community, for our community. Our Co-Creators include people with lived experience of homelessness, service providers, advocates, and local leaders. Each person brought their ideas, skills, and stories to help shape a plan that works for everyone in Waterloo Region.
+								The Plan to End Chronic Homelessness was made in community, by community, and for our community. Our Co-Creators include people with lived experience of homelessness, service providers, advocates, and local leaders. Each person brought their ideas, skills, and stories to help shape a plan that works for everyone in Waterloo Region.
 							</Text>
 						</div>
 						<div>
