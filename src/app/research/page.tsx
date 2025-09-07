@@ -152,7 +152,7 @@ export default function ResearchPage() {
 
 						<section className="max-w-3xl flex flex-col gap-8">
 							<Heading as="h3" size="lg" className="text-brand-dark-green">
-								We've Got Cracks in Our System
+								We've got cracks in our system
 							</Heading>
 							<Text size="md" className="text-brand-grey">
 								To make sure our system does not topple over, we have to build a better foundation that supports all of our needs. We've got cracks in our system.
@@ -177,7 +177,7 @@ export default function ResearchPage() {
 									<div className="flex flex-row gap-2 items-center">
 										<div className="h-4 w-4 rounded-full bg-brand-medium-green"></div>
 										<Text size="md" className="text-brand-grey">
-											Homelessness
+											Homeless
 										</Text>
 									</div>
 									<div className="flex flex-row gap-2 items-center">
@@ -227,7 +227,7 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									The top 5 reasons people said caused their experience of homelessness
+									5 main reasons people are facing homelessness
 								</Heading>
 								<div className="flex flex-col gap-4">
 									<ul className="list-disc list-inside">
@@ -378,7 +378,7 @@ export default function ResearchPage() {
 				<Container size="6xl" className="py-20 flex flex-col gap-8">
 					<div className="flex flex-col gap-8">
 						<Heading as="h3" size="md">
-							We're Changing the System
+							We're changing the system
 						</Heading>
 						<Text size="md">
 							It is time to rebuild our system to create something more resilient and transformed, or even a new kind of structure, rather than trying to force pieces to fit where they no longer make sense.

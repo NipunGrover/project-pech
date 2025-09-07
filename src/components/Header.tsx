@@ -23,7 +23,7 @@ export function Header() {
 
 	const navigationItems = [
 		{ href: "/plan", label: "The Plan" },
-		{ href: "/co-creators", label: "Co-Creator" },
+		{ href: "/co-creators", label: "Co-Creators" },
 		{ href: "/research", label: "Research" },
 	];
 
