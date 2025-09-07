@@ -191,12 +191,13 @@ export default function ResearchPage() {
 									Since 2020, chronic homelessness has grown by
 									{" "}
 									<Link href="https://waterlooregion.org/sites/default/files/PECHKeyFindingsReport_DRAFT.pdf" className="text-brand-medium-green">
-									<strong>28%</strong>
-									{" "}
-									each year
-									{" "}
-									.	
-									</Link>								.
+										<strong>28%</strong>
+										{" "}
+										each year
+										{" "}
+										.
+									</Link>
+									.
 								</Text>
 								<Text size="md" className="text-brand-grey">
 									On October 22, 2024,
