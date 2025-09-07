@@ -276,7 +276,7 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									Gender-based violence is a cause of almost half (45%) of family homelessness cases.
+									45% of family homelessness cases caused by gender-based violence
 								</Heading>
 								<Text size="md" className="text-brand-grey">
 									In local research, 83% of women said they stayed in an abusive housing situation because it felt safer than being unhoused. This is called hidden homelessness.
