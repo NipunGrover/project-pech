@@ -36,48 +36,58 @@ export default function CoCreators() {
 
 			<Container size="6xl">
 				<section className="py-20">
-					<div className="flex flex-col gap-6">
+					<div className="flex flex-row flex-wrap md:flex-nowrap items-center">
+						<div className="flex flex-col gap-6">
 
-						<Heading size="lg" className="text-brand-dark-green">About PECH</Heading>
+							<Heading size="lg" className="text-brand-dark-green">About PECH</Heading>
 
-						<div className="flex flex-row gap-4 flex-wrap items-center">
-							<Text
-								size="xl"
-								className="font-semibold text-brand-grey max-w-3xl"
-							>
-								Homelessness in Waterloo Region is higher than ever before. It is a complex problem with many causes, so there is no single solution.
-							</Text>
-							<Text
-								size="xl"
-								className="font-semibold text-brand-grey max-w-3xl"
-							>
-								To respond, the community worked with the
-								<ExternalLink href="https://www.waterlooregion.org/lived-expertise" className="text-brand-medium-green">Social Development Centre of Waterloo Region</ExternalLink>
-								{" "}
-								and Region of Waterloo staff in order to co-create The Plan to End Chronic Homelessness. This plan is a roadmap with clear strategies, resources, and timelines to end chronic homelessness in our region.
-							</Text>
-							<Text
-								size="xl"
-								className="font-semibold text-brand-grey max-w-3xl"
-							>
-								The voices of people with lived experience are central to this work. The Plan is created with the community, by the community, and for the community.
-							</Text>
-							<div className="flex-shrink-0 w-64 h-64">
-								<Image
-									alt="Logo of the PECH organization"
-									src="/logomark.png"
-									width={256}
-									height={256}
-									className="w-full h-full object-contain"
-									priority
-								/>
+							<div className="flex flex-row gap-4 flex-wrap items-center">
+								<Text
+									size="xl"
+									className="font-semibold text-brand-grey max-w-3xl"
+								>
+									Homelessness in Waterloo Region is higher than ever before. It is a complex problem with many causes, so there is no single solution.
+								</Text>
+								<Text
+									size="xl"
+									className="font-semibold break-words text-brand-grey max-w-3xl"
+								>
+									To respond, the community worked with the
+									{" "}
+									<ExternalLink
+										href="https://www.waterlooregion.org/lived-expertise"
+										className="text-brand-medium-green wrap-break-word"
+									>
+										Social Development Centre of Waterloo Region
+									</ExternalLink>
+									{" "}
+									and Region of Waterloo staff in order to co-create The Plan to End Chronic Homelessness. This plan is a roadmap with clear strategies, resources, and timelines to end chronic homelessness in our region.
+								</Text>
+								<Text
+									size="xl"
+									className="font-semibold text-brand-grey max-w-3xl"
+								>
+									The voices of people with lived experience are central to this work. The Plan is created with the community, by the community, and for the community.
+								</Text>
+
+							</div>
+
+							<div>
+								<Button>Read the full report</Button>
 							</div>
 						</div>
-
-						<div>
-							<Button>Read the full report</Button>
+						<div className="flex-shrink-0 w-64 h-64">
+							<Image
+								alt="Logo of the PECH organization"
+								src="/logomark.png"
+								width={256}
+								height={256}
+								className="w-full h-full object-contain"
+								priority
+							/>
 						</div>
 					</div>
+
 				</section>
 			</Container>
 			{/* This is not yet implemented but keeping it in case we add it later */}

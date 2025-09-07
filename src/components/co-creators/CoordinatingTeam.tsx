@@ -37,7 +37,7 @@ export default async function CoordinatingTeam() {
 	const teamMembers = await getCoordinatingTeam();
 
 	return (
-		<section className="bg-white py-20">
+		<section className="bg-brand-white py-20">
 			<Container size="6xl">
 				<Heading as="h3" size="lg" className="text-brand-dark-green mb-5">
 					Coordinating team
