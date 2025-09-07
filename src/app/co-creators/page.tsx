@@ -45,11 +45,23 @@ export default function CoCreators() {
 								className="font-semibold text-brand-grey max-w-3xl"
 							>
 								Homelessness in Waterloo Region is higher than ever before. It is a complex problem with many causes, so there is no single solution.
-								\n
+							</Text>
+							<Text
+								size="xl"
+								className="font-semibold text-brand-grey max-w-3xl"
+							>
 								To respond, the community worked with Region of Waterloo staff in order to co-create The Plan to End Chronic Homelessness. This plan is a roadmap with clear strategies, resources, and timelines to end chronic homelessness in our region.
-								\n
+							</Text>
+							<Text
+								size="xl"
+								className="font-semibold text-brand-grey max-w-3xl"
+							>
 								The voices of people with lived experience are central to this work. The Plan is created with the community, by the community, and for the community.
-								\n
+							</Text>
+							<Text
+								size="xl"
+								className="font-semibold text-brand-grey max-w-3xl"
+							>
 								On this site, you can discover about the Plan, explore data on homelessness, find housing and safety resources, and learn how to get involved.
 							</Text>
 							<div className="flex-shrink-0 w-64 h-64">
