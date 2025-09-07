@@ -15,7 +15,7 @@ export function HousingSupport() {
 
 		if (!hasVisited) {
 			// If first visit, show popup and set flag
-			const timeoutId = setTimeout(() => setOpen(true), 0);
+			const timeoutId = setTimeout(() => setOpen(true), 5_000);
 			localStorage.setItem("housing-popup-shown", "true");
 
 			// Cleanup timeout
