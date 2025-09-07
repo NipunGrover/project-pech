@@ -22,7 +22,7 @@ import { SolidHouseIllustration } from "./solid-house-illustration";
 const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
 	{
 		icon: <HomeIcon />,
-		title: "Building more homes",
+		title: "Building More Homes",
 		items: [
 			// eslint-disable-next-line react/no-missing-key
 			<Text
@@ -377,7 +377,7 @@ export default function ResearchPage() {
 			<div className="bg-brand-black text-white">
 				<Container size="6xl" className="py-20 flex flex-col gap-8">
 					<div className="flex flex-col gap-8">
-						<Heading as="h3" size="md">
+						<Heading as="h3" size="lg">
 							We're changing the system
 						</Heading>
 						<Text size="md">
