@@ -317,7 +317,7 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-12">
 								<Heading as="p" size="md" className="text-brand-grey">
-									High rent and low-income contributes to housing loss. This disproportionately impacts people with disabilities.
+									High rent and low-income contributes to housing loss.
 								</Heading>
 								<div className="flex justify-evenly items-center gap-4">
 									<div className="flex flex-col gap-2 items-center">
@@ -343,6 +343,9 @@ export default function ResearchPage() {
 										</div>
 									</div>
 								</div>
+								<Text size="md" className="text-brand-grey">
+									Rising rents disproportionately impacts people with disabilities.
+								</Text>
 								<Text size="md" className="text-brand-grey">
 									There is no rent control for housing built after 2018, so we are losing affordable housing. As one lived expert said:
 									<ExternalLink
