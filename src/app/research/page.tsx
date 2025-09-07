@@ -289,7 +289,7 @@ export default function ResearchPage() {
 									</Link>
 								</Text>
 								<Text size="md" className="text-brand-grey">
-									Youth on the margins: a region-wide survey in 2023, found that 13% of young people had experienced homelessness.
+									In a 2023 region-wide survey, 13% of young people said that they had experienced homelessness.
 									{" "}
 									<Link
 										className="text-brand-medium-green"
