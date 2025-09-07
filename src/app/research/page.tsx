@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
+import { ExternalLink } from "../../components/external-link";
 import { CommunityIcon } from "../../components/icons/community.icon";
 import { DocumentWithCheckIcon } from "../../components/icons/document-with-check.icon";
 import { DollarIcon } from "../../components/icons/dollar.icon";
@@ -46,7 +47,7 @@ const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
 			<Text size="md" as="span">
 				Learn about the Region of Waterloo's Building Better Futures Plan
 				{" "}
-				<Link href="https://www.regionofwaterloo.ca/en/living-here/affordable-housing-plan.aspx" className="text-brand-medium-green">[LINK]</Link>
+				<ExternalLink href="https://www.regionofwaterloo.ca/en/living-here/affordable-housing-plan.aspx" className="text-brand-medium-green">[LINK]</ExternalLink>
 			</Text>,
 		],
 	},
