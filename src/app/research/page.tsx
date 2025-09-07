@@ -177,13 +177,13 @@ export default function ResearchPage() {
 									<div className="flex flex-row gap-2 items-center">
 										<div className="h-4 w-4 rounded-full bg-brand-medium-green"></div>
 										<Text size="md" className="text-brand-grey">
-											Homeless
+											Unhoused
 										</Text>
 									</div>
 									<div className="flex flex-row gap-2 items-center">
 										<div className="h-4 w-4 rounded-full bg-brand-grey"></div>
 										<Text size="md" className="text-brand-grey">
-											Non-homeless
+											Housed
 										</Text>
 									</div>
 								</div>
