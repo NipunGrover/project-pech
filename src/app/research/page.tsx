@@ -283,7 +283,7 @@ export default function ResearchPage() {
 									45% of family homelessness cases caused by gender-based violence
 								</Heading>
 								<Text size="md" className="text-brand-grey">
-									In local research, 83% of women said they stayed in an abusive housing situation because it felt safer than being unhoused. This is called hidden homelessness.
+									In local research, 83% of women said they stayed in an abusive housing situation because it felt safer than being unhoused, contributing to hidden homelessness.
 									{" "}
 									<Link
 										className="text-brand-medium-green"
