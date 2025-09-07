@@ -294,6 +294,7 @@ export default function ResearchPage() {
 								</Heading>
 								<Text size="md" className="text-brand-grey">
 									In local research,
+									{" "}
 									<ExternalLink
 										className="text-brand-medium-green"
 										href="https://www.ywcacambridge.ca/wp-content/uploads/2023/07/Project-Willow-Report.pdf"
@@ -304,6 +305,7 @@ export default function ResearchPage() {
 								</Text>
 								<Text size="md" className="text-brand-grey">
 									In a 2023 region-wide survey,
+									{" "}
 									<ExternalLink
 										className="text-brand-medium-green"
 										href="https://childrenandyouthplanningtable.ca/wp-content/uploads/2024/08/HOMELESSNESS-Snapshot-YOUTH-IMPACT-SURVEY-Fast-Facts-V2-FINAL.pdf"
@@ -357,6 +359,7 @@ export default function ResearchPage() {
 								</Text>
 								<Text size="md" className="text-brand-grey">
 									There is no rent control for housing built after 2018, so we are losing affordable housing. As one lived expert said:
+									{" "}
 									<ExternalLink
 										className="text-brand-medium-green"
 										href="https://caeh.ca/wp-content/uploads/WH6-%E2%80%98Dont-Tell-People-Youre-Homeless-Experiences-of-Safety-Violence-and-Justice-among-Womens-Emergency-Shelter-Users.pdf"
