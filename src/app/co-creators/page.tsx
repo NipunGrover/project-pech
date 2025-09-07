@@ -16,10 +16,10 @@ export default function CoCreators() {
 					<div className="grid lg:grid-cols-2 gap-12 items-center">
 						<div className="flex flex-col gap-4">
 							<Heading size="2xl" className="font-semibold">
-								Meet the co-creators
+								Meet the Co-Creators
 							</Heading>
 							<Text size="xl">
-								This plan was built by our community, for our community. Our co-creators include people with lived experience of homelessness, service providers, advocates, and local leaders. Each person brought their ideas, skills, and stories to help shape a plan that works for everyone in Waterloo Region.
+								This plan was built by our community, for our community. Our Co-Creators include people with lived experience of homelessness, service providers, advocates, and local leaders. Each person brought their ideas, skills, and stories to help shape a plan that works for everyone in Waterloo Region.
 							</Text>
 						</div>
 						<div>
@@ -45,11 +45,11 @@ export default function CoCreators() {
 								className="font-semibold text-brand-grey max-w-3xl"
 							>
 								Homelessness in Waterloo Region is higher than ever before. It is a complex problem with many causes, so there is no single solution.
-								
+								\n
 								To respond, the community worked with Region of Waterloo staff in order to co-create The Plan to End Chronic Homelessness. This plan is a roadmap with clear strategies, resources, and timelines to end chronic homelessness in our region.
-								
+								\n
 								The voices of people with lived experience are central to this work. The Plan is created with the community, by the community, and for the community.
-								
+								\n
 								On this site, you can discover about the Plan, explore data on homelessness, find housing and safety resources, and learn how to get involved.
 							</Text>
 							<div className="flex-shrink-0 w-64 h-64">
