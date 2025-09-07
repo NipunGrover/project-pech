@@ -194,27 +194,25 @@ export default function ResearchPage() {
 										<strong>28%</strong>
 										{" "}
 										each year
-										{" "}
 									</Link>
 									.
 								</Text>
 								<Text size="md" className="text-brand-grey">
 									On October 22, 2024,
 									{" "}
-									<strong>2,371 people</strong>
-									{" "}
-									were experiencing homelessness in Waterloo Region. With only
-									{" "}
-									<strong>301 shelter beds</strong>
-									{" "}
-									available, many had to live outside or sleep in cars.
-									{" "}
 									<Link
 										href="https://www.regionofwaterloo.ca/en/living-here/resources/Housing-Services/137392-CS---PIT-Count-Infographic_Accessibility.pdf"
 										className="text-brand-medium-green"
 									>
-										LINK
+										<strong>2,371 people</strong>
+										{" "}
+										were experiencing homelessness in Waterloo Region
 									</Link>
+									. With only
+									{" "}
+									<strong>301 shelter beds</strong>
+									{" "}
+									available, many had to live outside or sleep in cars.
 								</Text>
 							</section>
 							<BlockIllustration
@@ -366,7 +364,7 @@ export default function ResearchPage() {
 									Even with shelters and housing supports, many people can't find a safe place that meets their needs.
 								</Heading>
 								<Text size="md" className="text-brand-grey">
-									Shelter spaces are often for specific groups, which leaves gaps for couples, 2SLGBTQ+ people, and those with pets. Rising rents, low incomes that can't keep up with the cost of living, and the loss of deeply affordable and therapeutic housing has damaged our whole housing system...
+									Shelter spaces are often for specific groups, which leaves gaps for couples, 2SLGBTQ+ people, and those with pets. Rising rents, low incomes that can't keep up with the cost of living, and the loss of deeply affordable and therapeutic housing has damaged our whole housing system.
 								</Text>
 							</div>
 							<div>
