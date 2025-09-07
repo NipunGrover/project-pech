@@ -163,7 +163,10 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-2xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									More than half of all known homelessness in Ontario is chronic
+									<ExternalLink href="https://www.amo.on.ca/sites/default/files/assets/DOCUMENTS/Reports/2025/2025-01-08-EndingChronicHomelessnessinOntario.pdf" className="text-brand-medium-green">
+										More than half
+									</ExternalLink>
+									of all known homelessness in Ontario is chronic
 								</Heading>
 								<div className="flex gap-4">
 									{[...Array.from({ length: 10 })].map((_, index) => (
