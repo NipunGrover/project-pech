@@ -3,7 +3,7 @@
 import type { Profile } from "@/lib/directus";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
-import { TypographyH2 } from "@/components/ui/typography";
+import { Text } from "@/components/ui/text";
 import { getDirectusAssetUrl } from "@/lib/assets";
 import { directus, readItems } from "@/lib/directus";
 import { Container } from "../ui/container";
@@ -38,9 +38,9 @@ export default async function CoordinatingTeam() {
 	return (
 		<section className="bg-white py-20">
 			<Container size="6xl">
-				<TypographyH2 className="font-semibold mb-4 text-brand-dark-green">
+				<Text className="font-semibold mb-4 text-brand-dark-green">
 					Coordinating team
-				</TypographyH2>
+				</Text>
 				<p className="text-gray-600 mb-16">
 					Our coordinating team brings together people with many skills and experiences. Together, they guide the work to end chronic homelessness in Waterloo Region.
 				</p>
