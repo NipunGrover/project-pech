@@ -56,7 +56,7 @@ export default function CoCreators() {
 									{" "}
 									<ExternalLink
 										href="https://www.waterlooregion.org/lived-expertise"
-										className="text-brand-medium-green wrap-break-word"
+										className="text-brand-medium-green"
 									>
 										Social Development Centre of Waterloo Region
 									</ExternalLink>
