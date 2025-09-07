@@ -1,11 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import CoCreatorsList from "@/components/co-creators/CoCreatorsList";
+
 import CoordinatingTeam from "@/components/co-creators/CoordinatingTeam";
-import { Button } from "@/components/ui/button";
 import { ExternalLink } from "../../components/external-link";
+import { ButtonVariants } from "../../components/ui/button";
 import { Container } from "../../components/ui/container";
 import { Heading } from "../../components/ui/heading";
 import { Text } from "../../components/ui/text";
+import { cn } from "../../lib/utils";
 import { HeaderCopyIllustration } from "./header-copy-illustration";
 
 export default function CoCreators() {
@@ -73,7 +76,18 @@ export default function CoCreators() {
 							</div>
 
 							<div>
-								<Button>Read the full report</Button>
+								<Link
+									href="https://hdp-ca-prod-app-wr-engage-files.s3.ca-central-1.amazonaws.com/8717/3751/5659/e2ab214d23f14d3ec25657d3de07dc38_Appendix_A_-_Final_PECH_Report.2024.pdf"
+									className={cn(
+										ButtonVariants({
+											size: "default",
+										}),
+										"bg-brand-dark-green text-white hover:bg-brand-dark-green/90",
+										"w-fit mt-2",
+									)}
+								>
+									Read the full report
+								</Link>
 							</div>
 						</div>
 						<div className="flex-shrink-0 w-64 h-64">
