@@ -42,7 +42,7 @@ export default async function CoCreatorsList() {
 					<Heading size="lg" className="font-bold">
 						Co-Creators
 					</Heading>
-					<Text size="xl" className="font-semibold">
+					<Text size="xl">
 						Lasting change takes teamwork: lived experience experts, community advocates, our services, and all levels of government. By joining forces, we can make a bigger impact.
 					</Text>
 				</div>
