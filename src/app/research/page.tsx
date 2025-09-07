@@ -231,7 +231,7 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									5 main reasons people are facing homelessness
+									5 main reasons people in Waterloo Region are experiencing homelessness:
 								</Heading>
 								<div className="flex flex-col gap-4">
 									<ul className="list-disc list-inside">
