@@ -155,7 +155,7 @@ export default function ResearchPage() {
 								We've got cracks in our system
 							</Heading>
 							<Text size="md" className="text-brand-grey">
-								To make sure our system does not topple over, we have to build a better foundation that supports all of our needs. We've got cracks in our system.
+								To make sure our system does not topple over, we have to build a better foundation that supports all of our needs. Homelessness is complicated, and unfortunately, lots of people fall through the cracks.
 							</Text>
 						</section>
 
