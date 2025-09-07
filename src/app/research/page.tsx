@@ -311,7 +311,7 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-12">
 								<Heading as="p" size="md" className="text-brand-grey">
-									Housing loss due to low wages and high rents
+									High rents and low wages contribute to housing loss
 								</Heading>
 								<div className="flex justify-evenly items-center gap-4">
 									<div className="flex flex-col gap-2 items-center">
