@@ -287,7 +287,7 @@ export default function ResearchPage() {
 									In local research,
 									<ExternalLink
 										className="text-brand-medium-green"
-										href="https://caeh.ca/wp-content/uploads/WH6-%E2%80%98Dont-Tell-People-Youre-Homeless-Experiences-of-Safety-Violence-and-Justice-among-Womens-Emergency-Shelter-Users.pdf"
+										href="https://www.ywcacambridge.ca/wp-content/uploads/2023/07/Project-Willow-Report.pdf"
 									>
 										83% of women said they stayed in an abusive housing situation because it felt safer than being unhoused
 									</ExternalLink>
