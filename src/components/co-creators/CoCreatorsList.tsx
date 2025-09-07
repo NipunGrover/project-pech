@@ -27,7 +27,7 @@ async function getCoCreators(): Promise<Profile[]> {
 			};
 		});
 	} catch (error) {
-		console.error("Failed to fetch co-creators:", error);
+		console.error("Failed to fetch Co-Creators:", error);
 		return [];
 	}
 }
