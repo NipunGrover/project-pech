@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import Head from "next/head";
 import { Footer } from "@/components/Footer";
@@ -8,6 +9,12 @@ const geist = Geist({
 	subsets: ["latin"],
 	variable: "--font-geist-sans",
 });
+
+export const metadata: Metadata = {
+	icons: {
+		icon: "/favicon.webp",
+	},
+};
 
 export default function RootLayout({
 	children,
@@ -20,7 +27,7 @@ export default function RootLayout({
 			className={`${geist.variable} antialiased`}
 		>
 			<Head>
-				<link rel="icon" href="/logomark.png" />
+				<link rel="icon" href="/favicon.webp" />
 			</Head>
 			<body className="antialiased">
 				<Header />
