@@ -46,6 +46,7 @@ const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
 			// eslint-disable-next-line react/no-missing-key
 			<Text size="md" as="span">
 				Learn about the Region of Waterloo's
+				{" "}
 				<ExternalLink href="https://www.regionofwaterloo.ca/en/living-here/affordable-housing-plan.aspx" className="text-brand-medium-green">Building Better Futures Plan</ExternalLink>
 				{" "}
 			</Text>,
