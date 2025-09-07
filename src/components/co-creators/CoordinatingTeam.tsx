@@ -48,7 +48,7 @@ export default async function CoordinatingTeam() {
 				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{teamMembers.map(member => (
 						<Card key={member.id} className="pt-0 rounded-sm overflow-hidden">
-							<div className="relative h-36 w-full">
+							<div className="relative h-40 w-full">
 								{member.profile_image
 									? (
 										<Image
