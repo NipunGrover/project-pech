@@ -235,7 +235,13 @@ export default function ResearchPage() {
 						<div className="relative">
 							<section className="max-w-xl flex flex-col gap-8">
 								<Heading as="p" size="md" className="text-brand-grey">
-									5 main reasons people in Waterloo Region are experiencing homelessness:
+									<ExternalLink
+										href="https://www.regionofwaterloo.ca/en/living-here/resources/Housing-Services/137392-CS---PIT-Count-Infographic_Accessibility.pdf"
+										className="text-brand-medium-green"
+									>
+										5 main reasons
+									</ExternalLink>
+									people in Waterloo Region are experiencing homelessness:
 								</Heading>
 								<div className="flex flex-col gap-4">
 									<ul className="list-disc list-inside">
