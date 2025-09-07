@@ -44,7 +44,13 @@ export default function CoCreators() {
 								size="xl"
 								className="font-semibold text-brand-grey max-w-3xl"
 							>
-								Plan to End Chronic Homelessness Prototyping Pilot Project started in March 2023 involving a team of lived experts, Region and SDC staff, seeking to enable implementation of potential solutions  to end chronic homelessness rooted in lived experience of unsheltered  and hidden homeless. The "Lived Expertise Prototyping Project" process report was compiled to describe the work done by August 2023, and was interwoven into the Key Findings Report that was presented to the Council on September 12th.
+								Homelessness in Waterloo Region is higher than ever before. It is a complex problem with many causes, so there is no single solution.
+								{" "}
+								To respond, the community worked with Region of Waterloo staff in order to co-create The Plan to End Chronic Homelessness. This plan is a roadmap with clear strategies, resources, and timelines to end chronic homelessness in our region.
+								{" "}
+								The voices of people with lived experience are central to this work. The Plan is created with the community, by the community, and for the community.
+								{" "}
+								On this site, you can discover about the Plan, explore data on homelessness, find housing and safety resources, and learn how to get involved.
 							</Text>
 							<div className="flex-shrink-0 w-64 h-64">
 								<Image
