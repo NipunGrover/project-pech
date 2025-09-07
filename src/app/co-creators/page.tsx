@@ -2,6 +2,7 @@ import Image from "next/image";
 import CoCreatorsList from "@/components/co-creators/CoCreatorsList";
 import CoordinatingTeam from "@/components/co-creators/CoordinatingTeam";
 import { Button } from "@/components/ui/button";
+import { ExternalLink } from "../../components/external-link";
 import { Container } from "../../components/ui/container";
 import { Heading } from "../../components/ui/heading";
 import { Text } from "../../components/ui/text";
@@ -50,7 +51,10 @@ export default function CoCreators() {
 								size="xl"
 								className="font-semibold text-brand-grey max-w-3xl"
 							>
-								To respond, the community worked with Region of Waterloo staff in order to co-create The Plan to End Chronic Homelessness. This plan is a roadmap with clear strategies, resources, and timelines to end chronic homelessness in our region.
+								To respond, the community worked with the
+								<ExternalLink href="https://www.waterlooregion.org/lived-expertise" className="text-brand-medium-green">Social Development Centre of Waterloo Region</ExternalLink>
+								{" "}
+								and Region of Waterloo staff in order to co-create The Plan to End Chronic Homelessness. This plan is a roadmap with clear strategies, resources, and timelines to end chronic homelessness in our region.
 							</Text>
 							<Text
 								size="xl"

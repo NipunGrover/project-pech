@@ -191,24 +191,24 @@ export default function ResearchPage() {
 								<Text size="md" className="text-brand-grey">
 									Since 2020, chronic homelessness in Waterloo Region has grown by
 									{" "}
-									<Link href="https://waterlooregion.org/sites/default/files/PECHKeyFindingsReport_DRAFT.pdf" className="text-brand-medium-green">
+									<ExternalLink href="https://waterlooregion.org/sites/default/files/PECHKeyFindingsReport_DRAFT.pdf" className="text-brand-medium-green">
 										<strong>28%</strong>
 										{" "}
 										each year
-									</Link>
+									</ExternalLink>
 									.
 								</Text>
 								<Text size="md" className="text-brand-grey">
 									On October 22, 2024,
 									{" "}
-									<Link
+									<ExternalLink
 										href="https://www.regionofwaterloo.ca/en/living-here/resources/Housing-Services/137392-CS---PIT-Count-Infographic_Accessibility.pdf"
 										className="text-brand-medium-green"
 									>
 										<strong>2,371 people</strong>
 										{" "}
 										were experiencing homelessness in Waterloo Region
-									</Link>
+									</ExternalLink>
 									. With only
 									{" "}
 									<strong>301 shelter beds</strong>
