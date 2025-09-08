@@ -353,7 +353,7 @@ export default function HelpPage() {
 								<Text size="lg" as="li">Helping with forms, benefits, and ID</Text>
 							</ul>
 							<Text size="lg">
-								Ask about Housing First or supportive housing programs when you call Housing Services.
+								Ask about Housing First or supportive housing programs when you call Region of Waterloo Housing Services.
 							</Text>
 						</div>
 
