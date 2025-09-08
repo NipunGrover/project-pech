@@ -55,7 +55,7 @@ const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
 				<ExternalLink href="https://www.regionofwaterloo.ca/en/living-here/affordable-housing-plan.aspx" className="text-brand-medium-green">
 					Building Better Futures Plan
 				</ExternalLink>
-				{" "}
+				.
 			</Text>,
 		],
 	},
@@ -115,7 +115,7 @@ const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
 				size="md"
 				as="span"
 			>
-				We’ve launched a supplement program to help people pay their rent
+				We’ve launched a supplement program to help people pay their rent.
 			</Text>,
 			// eslint-disable-next-line react/no-missing-key
 			<Text
