@@ -48,8 +48,11 @@ export default function HelpPage() {
 			>
 				<div className="max-w-xl text-brand-black flex flex-col gap-4">
 					<Heading size="lg">
-						If You Need Emergency Shelter
+						Do you need emergency shelter?
 					</Heading>
+					<Text size="lg">
+						This number will connect you to shelter programs in Cambridge, Kitchener, and Waterloo. Staff can tell you where there is space and help you get there.
+					</Text>
 					<div className={cn(
 						"md:border md:border-solid md:border-brand-medium-green",
 						"rounded-md p-2 flex gap-2",
@@ -76,12 +79,164 @@ export default function HelpPage() {
 							</Text>
 						</Link>
 						<Text as="span" size="lg" className="text-brand-dark-green">
-							Call First Connect anytime, day or night.
+							First Connect (available 24/7)
 						</Text>
 					</div>
+				</div>
+				<NeighbourhoodIllustration
+					className={cn(
+						"w-96 h-96 pt-20",
+						"hidden md:block",
+
+					)}
+				/>
+			</Container>
+
+			<Container
+				as="section"
+				size="6xl"
+				className={cn(
+
+					"flex flex-row items-end justify-between gap-16",
+					"py-16 overflow-hidden",
+				)}
+			>
+				<PersonHoldingBabyWithHouseIllustration
+					className={cn(
+						"w-96 h-96 pt-20",
+						"hidden md:block",
+
+					)}
+				/>
+				<div className="max-w-xl text-brand-black flex flex-col gap-4">
+					<Heading size="lg">
+						Are you in an unsafe or abusive home?
+					</Heading>
+					<div className="flex flex-col gap-2">
+						<Text size="lg">
+							If you are experiencing violence at home and it's no longer safe to stay, contact Women's Crisis Services of Waterloo region:
+						</Text>
+
+						<div className={cn(
+							"md:border md:border-solid md:border-brand-medium-green",
+							"rounded-md p-2 flex gap-2",
+							"md:items-center items-start flex-wrap",
+						)}
+						>
+							<Link
+								href="tel:519-742-5894"
+								className={cn(
+									"text-brand-medium-green bg-brand-yellow",
+									"p-1 rounded-md",
+									"border border-solid border-brand-medium-green",
+								)}
+							>
+								<Text
+									as="span"
+									size="lg"
+									className={cn(
+										"text-brand-dark-green",
+									)}
+								>
+									📞 519-742-5894
+								</Text>
+							</Link>
+							<Text as="span" size="lg" className="text-brand-dark-green">
+								Crisis line for Kitchener-Waterloo
+							</Text>
+						</div>
+						<div className={cn(
+							"md:border md:border-solid md:border-brand-medium-green",
+							"rounded-md p-2 flex gap-2",
+							"md:items-center items-start flex-wrap",
+						)}
+						>
+							<Link
+								href="tel:519-653-2422"
+								className={cn(
+									"text-brand-medium-green bg-brand-yellow",
+									"p-1 rounded-md",
+									"border border-solid border-brand-medium-green",
+								)}
+							>
+								<Text
+									as="span"
+									size="lg"
+									className={cn(
+										"text-brand-dark-green",
+									)}
+								>
+									📞 519-653-2422
+								</Text>
+							</Link>
+							<Text as="span" size="lg" className="text-brand-dark-green">
+								Crisis line for Cambridge
+							</Text>
+						</div>
+
+					</div>
 					<Text size="lg">
-						This number will connect you to shelter programs in Cambridge, Kitchener, and Waterloo. Staff can tell you where there is space and help you get there.
+						If you are in immediate danger, call 911.
 					</Text>
+				</div>
+
+			</Container>
+
+			<Container
+				as="section"
+				size="6xl"
+				className={cn(
+
+					"flex flex-row items-end justify-between gap-16",
+					"py-16 overflow-hidden",
+				)}
+			>
+				<div className="max-w-xl text-brand-black flex flex-col gap-4">
+					<Heading size="lg">
+						Experiencing sexual exploitation and you need help to leave?
+					</Heading>
+					<Text size="lg">
+						Contact the Anti-Human Trafficking Program of the Sexual Assault Support Centre (SASC) 24-hour support line below or email at
+						{" "}
+						<Link
+							href="email:ahtp@sascwr.org"
+							className="text-brand-medium-green"
+						>
+							ahtp@sascwr.org
+						</Link>
+						{" "}
+						from Monday-Friday, 9 a.m. to 4:30 p.m.
+					</Text>
+					<div className={cn(
+						"md:border md:border-solid md:border-brand-medium-green",
+						"rounded-md p-2 flex gap-2",
+						"md:items-center items-start flex-wrap",
+					)}
+					>
+						<Link
+							href="tel:519-571-0121;111"
+							className={cn(
+								"text-brand-medium-green bg-brand-yellow",
+								"p-1 rounded-md",
+								"border border-solid border-brand-medium-green",
+							)}
+						>
+							<Text
+								as="span"
+								size="lg"
+								className={cn(
+									"text-brand-dark-green",
+
+								)}
+							>
+								📞 519-571-0121 ext. 111
+							</Text>
+						</Link>
+						<Text as="span" size="lg" className="text-brand-dark-green">
+							SASC Waterloo Region
+						</Text>
+					</div>
+
 				</div>
 				<NeighbourhoodIllustration
 					className={cn(
