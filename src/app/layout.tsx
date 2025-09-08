@@ -26,9 +26,6 @@ export default function RootLayout({
 			lang="en"
 			className={`${geist.variable} antialiased`}
 		>
-			<Head>
-				<link rel="icon" href="/favicon.webp" />
-			</Head>
 			<body className="antialiased">
 				<Header />
 				<main className="pt-16 bg-brand-white">{children}</main>
