@@ -422,7 +422,16 @@ export default function ResearchPage() {
 									There is a long waiting list for subsidized housing in Waterloo Region.
 								</Heading>
 								<Text size="md" className="text-brand-grey">
-									The number of people on the waiting list for subsidized housing increased by 44 per cent in Waterloo Region between 2020 and 2023.
+									The number of people on the waiting list for subsidized housing increased by
+									{" "}
+									<ExternalLink
+										className="text-brand-medium-green"
+										href="https://aroundtheregion.ca/a-roadmap-to-ending-chronic-homelessness-in-waterloo-region/"
+									>
+										44 per cent
+									</ExternalLink>
+									{" "}
+									in Waterloo Region between 2020 and 2023.
 								</Text>
 								<Text size="md" className="text-brand-grey">
 									A shortage of subsidized housing, along with rising rents and income that can't keep up with the cost of living has put even more pressure on a system under strain.
