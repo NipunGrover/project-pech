@@ -41,13 +41,20 @@ const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
 			</Text>,
 			// eslint-disable-next-line react/no-missing-key
 			<Text size="md" as="span">
-				We've opened a shelter for women and gender-diverse people.
+				We've created more
+				{" "}
+				<ExternalLink href="https://ywcacambridge.ca/shelter/" className="text-brand-medium-green">
+					shelter spaces for women and gender-diverse people
+				</ExternalLink>
+				.
 			</Text>,
 			// eslint-disable-next-line react/no-missing-key
 			<Text size="md" as="span">
 				Learn about the Region of Waterloo's
 				{" "}
-				<ExternalLink href="https://www.regionofwaterloo.ca/en/living-here/affordable-housing-plan.aspx" className="text-brand-medium-green">Building Better Futures Plan</ExternalLink>
+				<ExternalLink href="https://www.regionofwaterloo.ca/en/living-here/affordable-housing-plan.aspx" className="text-brand-medium-green">
+					Building Better Futures Plan
+				</ExternalLink>
 				{" "}
 			</Text>,
 		],
@@ -356,7 +363,15 @@ export default function ResearchPage() {
 									</div>
 								</div>
 								<Text size="md" className="text-brand-grey">
-									Rising rents and disproportionately impacts people with disabilities.
+									Rising rents and disproportionately impacts people with disabilities, and they are
+									{" "}
+									<ExternalLink
+										className="text-brand-medium-green"
+										href="https://www.chrc-ccdp.gc.ca/our-work/monitoring-canada-human-rights-obligations/monitoring-disability-rights/right-housing-people-disabilities#results"
+									>
+										more than two times likely to live in core housing need
+									</ExternalLink>
+									.
 								</Text>
 								<Text size="md" className="text-brand-grey">
 									There is no rent control for housing built after 2018, so we are losing affordable housing. As one lived expert said:
