@@ -37,7 +37,7 @@ const FeatureChangeCardItems: Array<FeatureChangeCardProps> = [
 				size="md"
 				as="span"
 			>
-				We're adding more transitional housing spaces.
+				We're adding more transitional housing.
 			</Text>,
 			// eslint-disable-next-line react/no-missing-key
 			<Text size="md" as="span">
@@ -189,13 +189,13 @@ export default function ResearchPage() {
 									<div className="flex flex-row gap-2 items-center">
 										<div className="h-4 w-4 rounded-full bg-brand-medium-green"></div>
 										<Text size="md" className="text-brand-grey">
-											Chronically Unhoused
+											Chronic Homelessness
 										</Text>
 									</div>
 									<div className="flex flex-row gap-2 items-center">
 										<div className="h-4 w-4 rounded-full bg-brand-grey"></div>
 										<Text size="md" className="text-brand-grey">
-											Unhoused
+											All Homelessness
 										</Text>
 									</div>
 								</div>
