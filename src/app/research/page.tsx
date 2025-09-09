@@ -138,7 +138,7 @@ export default function ResearchPage() {
 					<div className="grid lg:grid-cols-2 items-center">
 						<div className="flex flex-col gap-4">
 							<Heading size="2xl" className="font-semibold">
-								The housing system is under strain
+								The Housing System is Under Strain
 							</Heading>
 							<Text size="xl">
 								Our housing system is like a tower with missing blocks: it can't hold everyone up. As we face  more challenges, the whole structure becomes shaky.

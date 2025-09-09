@@ -44,7 +44,7 @@ export default function HelpPage() {
 					>
 						<div className="max-w-xl flex flex-col gap-4">
 							<Heading size="2xl">
-								Get help now
+								Get Help Now
 							</Heading>
 							<Text size="xl">
 								If you don’t have a safe place to stay, or you might lose your home, there are people and programs in Waterloo Region who can help.
