@@ -171,7 +171,7 @@ export default function Home() {
 					<div className="grid grid-cols-12">
 						<div className="col-span-12 md:col-span-4 flex flex-col gap-6">
 							<Heading size="lg" className="font-bold text-brand-black">
-								Meet the Co-creators
+								Meet the Co-Creators
 							</Heading>
 							<Text size="lg" className="font-normal">
 								Many of us worked on this plan together. Meet the people who helped make it happen.
