@@ -112,13 +112,13 @@ export default function Home() {
 						<div>
 							<OutlinedHouseIllustration />
 							<Text size="lg">
-								It's time to build a stronger system
+								It's time to build a stronger system.
 							</Text>
 						</div>
 					</div>
 					<div className="flex gap-4 mt-8 flex-col justify-evenly">
 						<Heading size="sm" className="text-brand-light-green font-bold">
-							The data we collect has real life stories behind the numbers
+							The data we collect have real life stories behind the numbers.
 						</Heading>
 						<Link
 							href="/research"
@@ -178,7 +178,7 @@ export default function Home() {
 							</Text>
 							<Button variant="default" className="w-fit" asChild>
 								<Link href="/co-creators">
-									See all co-creators
+									See all Co-Creators
 									<ArrowRightIcon />
 								</Link>
 							</Button>
