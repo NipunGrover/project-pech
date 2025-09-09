@@ -309,7 +309,7 @@ export default function ResearchPage() {
 									>
 										83% of women said they stayed in an abusive home because it felt safer than being homeless
 									</ExternalLink>
-									This adds to hidden homelessness.
+									. This adds to hidden homelessness.
 								</Text>
 								<Text size="md" className="text-brand-grey">
 									In a 2023 region-wide survey,
