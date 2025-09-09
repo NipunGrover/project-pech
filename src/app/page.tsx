@@ -56,7 +56,7 @@ export default function Home() {
 							to End Chronic Homelessness
 						</Heading>
 						<Text size="lg" className="font-normal">
-							A collaborative roadmap for strategies, resources and timelines to end chronic homelessness in Waterloo Region
+							A shared plan with clear steps and resources to end chronic homelessness in Waterloo Region.
 						</Text>
 					</div>
 					<HouseIllustration />
