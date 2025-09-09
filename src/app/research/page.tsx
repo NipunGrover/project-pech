@@ -418,7 +418,15 @@ export default function ResearchPage() {
 									Many unhoused people can't find a safe space that meets their needs; shelter spaces often have rules about who can stay, which leaves gaps for couples, 2SLGBTQ+ people, and those with pets.
 								</Text>
 								<Text size="md" className="text-brand-grey">
-									This leaves people with no choice but to live outside. 41% of people counted as experiencing homelessness in Waterloo Region in 2024 were living rough.
+									This leaves people with no choice but to live outside.
+									{" "}
+									<ExternalLink
+										className="text-brand-medium-green"
+										href="https://www.regionofwaterloo.ca/en/living-here/resources/Housing-Services/137392-CS---PIT-Count-Infographic_Accessibility.pdf"
+									>
+										41% of people counted as experiencing homelessness in Waterloo Region in 2024 were living rough
+									</ExternalLink>
+									.
 								</Text>
 							</section>
 							<BlockIllustration
