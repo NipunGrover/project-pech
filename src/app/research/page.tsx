@@ -227,8 +227,8 @@ export default function ResearchPage() {
 									available, many had to live outside or sleep in cars.
 								</Text>
 								<Text size="md" className="text-brand-grey">
-									Some people may not have been counted by service providers if they were unsheltered, unsafely housed, or couch-surfing. This is known as hidden homelessness.
-									It also means there could be many more people experiencing homelessness than counted by our system.
+									Some people may not be counted if they are living outside, staying in unsafe housing, or sleeping on a friend’s couch.
+									This is called hidden homelessness. It means the real number of people without housing may be higher than what our system shows.
 								</Text>
 							</section>
 							<BlockIllustration
@@ -307,9 +307,9 @@ export default function ResearchPage() {
 										className="text-brand-medium-green"
 										href="https://www.ywcacambridge.ca/wp-content/uploads/2023/07/Project-Willow-Report.pdf"
 									>
-										83% of women said they stayed in an abusive housing situation because it felt safer than being unhoused
+										83% of women said they stayed in an abusive home because it felt safer than being homeless
 									</ExternalLink>
-									, contributing to hidden homelessness.
+									This adds to hidden homelessness.
 								</Text>
 								<Text size="md" className="text-brand-grey">
 									In a 2023 region-wide survey,
@@ -318,9 +318,9 @@ export default function ResearchPage() {
 										className="text-brand-medium-green"
 										href="https://childrenandyouthplanningtable.ca/wp-content/uploads/2024/08/HOMELESSNESS-Snapshot-YOUTH-IMPACT-SURVEY-Fast-Facts-V2-FINAL.pdf"
 									>
-										13% of youth aged 9 to 18 said that they had experienced homelessness
+										13% of youth aged 9 to 18 said they had experienced homelessness
 									</ExternalLink>
-									. Most of the youth had experienced hidden homelessness but 3% shared that they had experienced visible homelessness.
+									. Most had faced hidden homelessness, but 3% said they had experienced visible homelessness.
 									{" "}
 								</Text>
 							</section>
@@ -363,13 +363,13 @@ export default function ResearchPage() {
 									</div>
 								</div>
 								<Text size="md" className="text-brand-grey">
-									Rising rents and disproportionately impacts people with disabilities, and they are
+									Rising rents hit people with disabilities the hardest. They are
 									{" "}
 									<ExternalLink
 										className="text-brand-medium-green"
 										href="https://www.chrc-ccdp.gc.ca/our-work/monitoring-canada-human-rights-obligations/monitoring-disability-rights/right-housing-people-disabilities#results"
 									>
-										more than two times likely to live in core housing need
+										more than twice as likely to live in housing that does not meet their needs
 									</ExternalLink>
 									.
 								</Text>
