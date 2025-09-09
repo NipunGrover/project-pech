@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
+import { HalfHumanIllustration } from "@/components/illustrations/half-human";
 import { ExternalLink } from "../../components/external-link";
 import { CommunityIcon } from "../../components/icons/community.icon";
 import { DocumentWithCheckIcon } from "../../components/icons/document-with-check.icon";
@@ -177,13 +178,27 @@ export default function ResearchPage() {
 									of all known homelessness in Ontario is chronic.
 								</Heading>
 								<div className="flex gap-4">
-									{[...Array.from({ length: 10 })].map((_, index) => (
+									{[...Array.from({ length: 5 })].map((_, index) => (
 										<HumanIllustration
-											variant={index < 5 ? "brand-medium-green" : "brand-grey"}
+											variant={index < 5
+												? "brand-medium-green"
+												: null}
 											// eslint-disable-next-line react/no-array-index-key
 											key={`human-${index}`}
 										/>
 									))}
+									<HalfHumanIllustration>
+									</HalfHumanIllustration>
+									{[...Array.from({ length: 5 })].map((_, index) => (
+										<HumanIllustration
+											variant={index < 4
+												? "brand-grey"
+												: null}
+											// eslint-disable-next-line react/no-array-index-key
+											key={`human-${index}`}
+										/>
+									))}
+
 								</div>
 								<div className="flex flex-row gap-4">
 									<div className="flex flex-row gap-2 items-center">
