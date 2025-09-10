@@ -5,9 +5,11 @@ import { formatDate } from "date-fns";
 import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import React from "react";
 import { HumanIllustration } from "../../../illustrations/human";
+import { Button } from "../../../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../../../ui/card";
 import { Heading } from "../../../ui/heading";
 import { Text } from "../../../ui/text";
+import { HousingStatsStateReducer } from "./housing-stats-state";
 
 export interface HousingStatsProps {
 	data: Array<Pick<
@@ -22,38 +24,37 @@ export interface HousingStatsProps {
 }
 
 export function HousingStats({ data }: HousingStatsProps) {
-	const [currentDataPointIndex, setCurrentDataPointIndex] = React.useState(data.length - 1);
+	const [
+		{
+			currentDataPoint,
+			isNextDataPointAvailable,
+			isPreviousDataPointAvailable,
+		},
+		dispatch,
+	] = React.useReducer(HousingStatsStateReducer, {
+		allDataPoints: data,
+		currentDataPoint: data[data.length - 1],
+		currentDataPointIndex: data.length - 1,
+		isNextDataPointAvailable: data.length > 1,
+		isPreviousDataPointAvailable: data.length > 1,
+	});
 
-	const displayData = data[currentDataPointIndex];
+	const housedNonChronic = Number.parseInt(currentDataPoint.Housed_N_Chronic);
 
-	const housedNonChronic = Number.parseInt(displayData.Housed_N_Chronic);
-
-	const housedChronic = Number.parseInt(displayData.Housed_Chronic);
+	const housedChronic = Number.parseInt(currentDataPoint.Housed_Chronic);
 
 	const totalHoused = housedChronic + housedNonChronic;
 
-	const inflowStat = Number.parseInt(displayData.New_Chronic_Y_Inflow);
+	const inflowStat = Number.parseInt(currentDataPoint.New_Chronic_Y_Inflow);
 
-	const outflowStat = Number.parseInt(displayData.Outflow);
-
-	const isNextDataPointDisabled = currentDataPointIndex === data.length - 1;
-
-	const isPreviousDataPointDisabled = currentDataPointIndex === 0;
+	const outflowStat = Number.parseInt(currentDataPoint.Outflow);
 
 	function goToNextDataPoint() {
-		if (isNextDataPointDisabled) {
-			return;
-		}
-
-		setCurrentDataPointIndex(idx => idx + 1);
+		dispatch({ type: "go_to_next_data_point" });
 	}
 
 	function goToPreviousDataPoint() {
-		if (isPreviousDataPointDisabled) {
-			return;
-		}
-
-		setCurrentDataPointIndex(idx => idx - 1);
+		dispatch({ type: "go_to_previous_data_point" });
 	}
 
 	return (
@@ -61,11 +62,11 @@ export function HousingStats({ data }: HousingStatsProps) {
 			<Heading size="lg" className="font-bold inline-flex gap-4 items-center">
 				Total people housed for
 				<DataSelector
-					isNextDataPointDisabled={isNextDataPointDisabled}
-					isPreviousDataPointDisabled={isPreviousDataPointDisabled}
+					isNextDataPointDisabled={!isNextDataPointAvailable}
+					isPreviousDataPointDisabled={!isPreviousDataPointAvailable}
 					goToNextDataPoint={goToNextDataPoint}
 					goToPreviousDataPoint={goToPreviousDataPoint}
-					dataPoint={displayData}
+					dataPoint={currentDataPoint}
 				/>
 			</Heading>
 			<div className="grid grid-cols-12 gap-8 items-center">
@@ -147,22 +148,26 @@ function DataSelector({
 }: DataSelectorProps) {
 	return (
 		<div className="flex gap-4">
-			<Heading className="text-brand-dark-green underline" as="span">{formatDate(dataPoint.date, "MMMM yyyy")}</Heading>
-			<div>
-				<button
+			<Heading className="text-brand-dark-green underline" as="span">{formatDate(dataPoint.date, "MMM yyyy")}</Heading>
+			<div className="flex flex-row gap-4 items-center">
+				<Button
+					aria-label="See the previous month's data"
+					className="rounded-full"
 					type="button"
 					disabled={isPreviousDataPointDisabled}
 					onClick={goToPreviousDataPoint}
 				>
 					<ArrowLeftIcon />
-				</button>
-				<button
+				</Button>
+				<Button
+					aria-label="See the next month's data"
+					className="rounded-full"
 					onClick={goToNextDataPoint}
 					type="button"
 					disabled={isNextDataPointDisabled}
 				>
 					<ArrowRightIcon />
-				</button>
+				</Button>
 			</div>
 		</div>
 	);
@@ -174,6 +179,8 @@ interface FlowCardProps {
 }
 
 function FlowCard({ stat, type }: FlowCardProps) {
+	const Arrow = type === "inflow" ? InflowArrow : OutflowArrow;
+
 	return (
 		<Card>
 			<CardHeader>
@@ -183,13 +190,11 @@ function FlowCard({ stat, type }: FlowCardProps) {
 					</Heading>
 				</CardTitle>
 				<CardContent>
-					<div className="flex items-center gap-4">
+					<div className="flex w-full justify-between items-center gap-4">
 						<Heading as="p" size="xl" className="font-semibold text-brand-grey">
 							{stat}
 						</Heading>
-						{type === "inflow"
-							? <InflowArrow />
-							: <OutflowArrow />}
+						<Arrow className="h-24 w-36" />
 					</div>
 				</CardContent>
 			</CardHeader>
