@@ -1,4 +1,5 @@
-import { TypographyH3, TypographyMuted } from "@/components/ui/typography";
+import { Heading } from "@/components/ui/heading";
+import { Text } from "@/components/ui/text";
 
 interface Action {
 	id: string;
@@ -38,14 +39,12 @@ export default function PlanLookingAhead() {
 		>
 			<div className="max-w-6xl mx-auto px-4 space-y-6">
 				<div className="space-y-1">
-					<TypographyH3
-						className="font-semibold text-pech-deep-teal border-none p-0"
-					>
+					<Heading size="md" className="text-pech-deep-teal">
 						Looking Ahead
-					</TypographyH3>
-					<TypographyMuted className="text-neutral-500">
+					</Heading>
+					<Text size="sm" className="text-neutral-500">
 						Our future Priority Actions
-					</TypographyMuted>
+					</Text>
 				</div>
 
 				<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

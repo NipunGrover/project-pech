@@ -3,7 +3,7 @@
 import type React from "react";
 import { useLayoutEffect, useRef, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { TypographyH3 } from "@/components/ui/typography";
+import { Heading } from "@/components/ui/heading";
 import { cn } from "@/lib/utils";
 
 interface FocusArea {
@@ -476,11 +476,9 @@ export function PlanOverview() {
 			>
 				<div className="max-w-6xl mx-auto px-4 space-y-8">
 					<div className="space-y-2">
-						<TypographyH3
-							className="font-semibold text-pech-deep-teal border-none p-0"
-						>
+						<Heading size="md" className="text-pech-deep-teal">
 							Our Focus Areas
-						</TypographyH3>
+						</Heading>
 					</div>
 
 					<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-7 items-stretch">
