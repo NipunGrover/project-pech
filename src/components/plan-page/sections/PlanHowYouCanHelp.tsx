@@ -21,12 +21,12 @@ export default function PlanHowYouCanHelp() {
 					</Heading>
 
 					<ul className="list-disc pl-5 space-y-2 text-neutral-200">
-						<Text size="xl" className="font-semibold" as="li">Learn and share. Tell friends and neighbours about the Plan.</Text>
+						<Text size="xl" className="font-semibold" as="li">Learn and share: tell friends and neighbours about the Plan.</Text>
 						<Text size="xl" className="font-semibold" as="li">
-							Add your voice. Write to your councillor, MPP or MP about affordable
+							Add your voice: write to your councillor, MPP or MP about affordable
 							housing.
 						</Text>
-						<Text size="xl" className="font-semibold" as="li">Join in. Come to town halls and community meetings.</Text>
+						<Text size="xl" className="font-semibold" as="li">Join in: come to town halls and community meetings.</Text>
 					</ul>
 
 				</div>
