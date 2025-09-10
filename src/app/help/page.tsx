@@ -358,7 +358,7 @@ export default function HelpPage() {
 						</div>
 
 						<Heading size="md">
-							Other Ways to Get Help
+							Other ways to get help
 						</Heading>
 
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
