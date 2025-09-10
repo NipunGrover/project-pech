@@ -341,7 +341,7 @@ export default function HelpPage() {
 					>
 
 						<Heading size="lg">
-							If You Need Support While Housed
+							If you need support while housed
 						</Heading>
 						<div className="flex flex-col gap-4">
 							<Text size="lg">
@@ -411,7 +411,7 @@ export default function HelpPage() {
 				>
 					<div className="max-w-xl text-brand-black flex flex-col gap-4">
 						<Heading size="lg">
-							You Are Not Alone
+							You are not alone
 						</Heading>
 						<Text size="lg">
 							It can be hard to ask for help, but there are people in our community who care and want to see you safe and housed. Even if you’re not sure what help you need, start by calling one of the numbers above.
