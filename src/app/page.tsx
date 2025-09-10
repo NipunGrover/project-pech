@@ -117,9 +117,9 @@ export default function Home() {
 					<div className="flex items-center gap-4 flex-col">
 						<div className="flex items-center flex-col">
 							<OutlinedHouseIllustration />
-							<Text size="lg">
+							<Heading size="xs">
 								It's time to build a stronger system.
-							</Text>
+							</Heading>
 						</div>
 					</div>
 					<div className="flex gap-4 mt-8 flex-col justify-evenly">

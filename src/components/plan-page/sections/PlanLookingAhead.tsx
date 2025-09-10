@@ -11,22 +11,22 @@ const ACTIONS: Action[] = [
 	{
 		id: "unused-land",
 		label: "More housing on unused land",
-		bgClass: "bg-[#71C6AC] text-white",
+		bgClass: "bg-brand-light-green text-white",
 	},
 	{
 		id: "indigenous",
 		label: "Indigenous-focused housing strategies",
-		bgClass: "bg-pech-deep-teal text-white",
+		bgClass: "bg-brand-dark-green text-white",
 	},
 	{
 		id: "youth",
 		label: "Youth Strategy",
-		bgClass: "bg-[#1BA3A3] text-white",
+		bgClass: "bg-brand-medium-green text-white",
 	},
 	{
 		id: "veterans",
 		label: "Housing plan for veterans",
-		bgClass: "bg-pech-grey text-white",
+		bgClass: "bg-brand-grey text-white",
 	},
 ];
 
@@ -55,7 +55,10 @@ export default function PlanLookingAhead() {
 							role="group"
 							aria-roledescription="action"
 						>
-							{a.label}
+							<Heading size="xs" className="font-bold">
+								{a.label}
+							</Heading>
+
 						</div>
 					))}
 				</div>
