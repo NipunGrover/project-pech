@@ -67,11 +67,11 @@ export default function PlanPage() {
 						</Heading>
 						<div className="relative w-full pt-24 pb-24">
 							{/* Segmented bar with in-segment content and connectors */}
-							<div className="grid grid-cols-1 md:grid-cols-3 w-full gap-y-12 md:gap-y-0 md:h-24">
+							<div className="grid grid-cols-1 md:grid-cols-3 w-full gap-y-12 md:gap-y-0 md:h-12">
 								{/* Segment 1: Using data */}
 								<div className="relative w-full">
 									<div className="h-12 md:h-full bg-[#111111]"></div>
-									<div className="md:absolute md:top-24">
+									<div className="md:absolute md:top-12">
 										<div className="w-[1px] h-10 md:h-16 bg-brand-white/50"></div>
 										<div className="flex flex-col">
 											<Heading size="xs" className="text-md">Using data to guide decisions.</Heading>
@@ -100,7 +100,7 @@ export default function PlanPage() {
 									)}
 									>
 									</div>
-									<div className="md:absolute md:top-24">
+									<div className="md:absolute md:top-12">
 										<div className="w-[1px] h-10 md:h-16 bg-brand-white/50"></div>
 										<div className="flex flex-col md:items-start">
 											<Heading size="xs" className="text-md">Supporting innovation</Heading>

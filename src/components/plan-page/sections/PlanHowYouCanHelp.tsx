@@ -15,6 +15,7 @@ export default function PlanHowYouCanHelp() {
 					How you can help
 				</Heading>
 
+
 				<ul className="list-disc pl-5 space-y-2 text-neutral-200">
 					<Text size="xl" className="font-semibold" as="li">Learn and share. Tell friends and neighbours about the Plan.</Text>
 					<Text size="xl" className="font-semibold" as="li">
@@ -23,7 +24,6 @@ export default function PlanHowYouCanHelp() {
 					</Text>
 					<Text size="xl" className="font-semibold" as="li">Join in. Come to town halls and community meetings.</Text>
 				</ul>
-
 			</div>
 
 		</section>
