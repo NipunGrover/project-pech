@@ -1,6 +1,5 @@
 import { Heading } from "@/components/ui/heading";
 import { Text } from "@/components/ui/text";
-import { TypographyH3, TypographyMuted } from "@/components/ui/typography";
 
 interface Action {
 	id: string;
@@ -41,8 +40,9 @@ export default function PlanLookingAhead() {
 			<div className="max-w-6xl mx-auto px-4 space-y-6">
 				<div className="space-y-1">
 					<Heading
-										as="h3" size="lg"
-									>
+						as="h3"
+						size="lg"
+					>
 						Looking Ahead
 					</Heading>
 					<Text size="xl" className="font-semibold">
@@ -61,7 +61,7 @@ export default function PlanLookingAhead() {
 							<Heading size="xs" className="font-bold">
 								{a.label}
 							</Heading>
-							
+
 						</div>
 					))}
 				</div>
