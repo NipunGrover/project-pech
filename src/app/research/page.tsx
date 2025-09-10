@@ -513,7 +513,7 @@ export default function ResearchPage() {
 			<div>
 				<Container size="6xl" className="py-20 flex flex-col gap-4">
 					<Heading as="h3" size="lg" className="text-brand-dark-green font-bold">
-						Be Part of the Solution
+						Be part of the solution
 					</Heading>
 					<Text size="md" className="font-semibold text-brand-grey">
 						Ending chronic homelessness takes all of us. Learn more about the Plan, share what you know, and speak up for safe, affordable housing in Waterloo Region.
