@@ -116,7 +116,7 @@ function RoadmapCanvas() {
 								marginLeft: m.align === "left" ? "0.5rem" : undefined,
 							}}
 						>
-						<div className={`space-y-2 ${m.align === "left" ? "text-left" : "text-center"} min-w-[140px] max-w-[260px]`}>
+							<div className={`space-y-2 ${m.align === "left" ? "text-left" : "text-center"} min-w-[140px] max-w-[260px]`}>
 								<Text as="div" size="sm" weight="semibold" className="leading-tight">{m.title}</Text>
 								{m.caption && (
 									<Text as="div" size="xs" className="text-neutral-300 leading-snug">{m.caption}</Text>

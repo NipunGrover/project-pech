@@ -8,8 +8,8 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Heading } from "@/components/ui/heading";
+import { Input } from "@/components/ui/input";
 
 export default function PlanHowYouCanHelp() {
 	return (
