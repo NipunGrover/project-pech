@@ -63,6 +63,7 @@ export default function Home() {
 						className={cn(
 							// "hidden md:block",
 							"h-48 w-48",
+							"md:h-auto md:w-auto",
 						)}
 					/>
 				</Container>

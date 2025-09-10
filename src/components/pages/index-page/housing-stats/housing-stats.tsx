@@ -59,7 +59,7 @@ export function HousingStats({ data }: HousingStatsProps) {
 
 	return (
 		<React.Fragment>
-			<Heading size="lg" className="font-bold inline-flex gap-4 items-center">
+			<Heading size="lg" className="font-bold inline-flex flex-wrap lg:flex-flex-nowrap gap-4 items-center">
 				Total people housed for
 				<DataSelector
 					isNextDataPointDisabled={!isNextDataPointAvailable}
