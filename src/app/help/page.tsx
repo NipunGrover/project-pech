@@ -285,7 +285,7 @@ export default function HelpPage() {
 					/>
 					<div className="max-w-xl text-brand-black flex flex-col gap-4">
 						<Heading size="lg">
-							If You Are at Risk of Losing Your Housing
+							If you are at risk of losing your housing
 						</Heading>
 						<div className="flex flex-col gap-2">
 							<Text size="lg">
