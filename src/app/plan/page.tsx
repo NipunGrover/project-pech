@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PlanHowYouCanHelp from "@/components/plan-page/sections/PlanHowYouCanHelp";
 import PlanLookingAhead from "@/components/plan-page/sections/PlanLookingAhead";
+import { PlanOverview } from "@/components/plan-page/sections/PlanOverview";
 import { Container } from "../../components/ui/container";
 import { Heading } from "../../components/ui/heading";
 import { Text } from "../../components/ui/text";
@@ -43,18 +44,8 @@ export default function PlanPage() {
 					/>
 				</Container>
 			</main>
-			<section
-				className="bg-brand-yellow"
-			>
-				<Container>
-					<Heading
-						size="lg"
-						className="text-brand-dark-green text-left"
-					>
-						Our focus areas
-					</Heading>
-				</Container>
-			</section>
+			{/* Focus areas cards */}
+			<PlanOverview />
 			<section
 				className="bg-brand-black text-brand-white"
 			>
