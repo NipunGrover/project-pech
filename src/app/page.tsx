@@ -115,7 +115,7 @@ export default function Home() {
 					className="mt-20 grid grid-cols-1 md:grid-cols-2 items-center"
 				>
 					<div className="flex items-center gap-4 flex-col">
-						<div>
+						<div className="flex items-center flex-col">
 							<OutlinedHouseIllustration />
 							<Text size="lg">
 								It's time to build a stronger system.
