@@ -42,14 +42,14 @@ export default function Home() {
 					size="6xl"
 					as="section"
 					className={cn(
-						"flex flex-row items-center justify-between gap-16",
+						"flex md:flex-row items-center flex-wrap flex-col-reverse md:flex-nowrap justify-between gap-16",
 						"py-16",
 					)}
 				>
 					<div
 						className="max-w-xl flex flex-col gap-4"
 					>
-						<Heading size="2xl" className="font-normal">
+						<Heading size="2xl" className="break-words text-pretty font-normal">
 							<span className="font-bold">The Plan</span>
 							{" "}
 							<br />
@@ -59,7 +59,12 @@ export default function Home() {
 							A shared plan with clear steps and resources to end chronic homelessness in Waterloo Region.
 						</Text>
 					</div>
-					<HouseIllustration />
+					<HouseIllustration
+						className={cn(
+							// "hidden md:block",
+							"h-48 w-48",
+						)}
+					/>
 				</Container>
 			</main>
 			<Container
@@ -96,10 +101,10 @@ export default function Home() {
 						})}
 					</div>
 					<div className="flex flex-col items-start">
-						<Heading size="md" className="font-normal" as="h3">
+						<Heading size="sm" className="font-serif font-normal" as="h3">
 							"Housing is both a human right and a speculative commodity from which to extract wealth. Therein lies the crux of the housing problem. Until we fully reconcile these contradictory roles that housing plays, we will be in a perpetual state of crisis."
 						</Heading>
-						<Text size="xl">
+						<Text size="xl" className="font-serif">
 							—(Doucet, Mcdougall and Jay 2023) (LE Prototyping Cohort, 2024)
 						</Text>
 					</div>

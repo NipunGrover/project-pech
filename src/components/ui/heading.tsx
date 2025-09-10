@@ -14,7 +14,7 @@ export const HeadingVariants = cva("m-0 font-semibold", {
 			"md": "text-4xl leading-11 tracking-[-0.02em]", // 36px / 44px
 			"lg": "text-5xl leading-[3.75rem] tracking-[-0.02em]", // 48px / 60px
 			"xl": "text-[3.75rem] leading-[4.5rem] tracking-[-0.02em]", // 60px / 72px
-			"2xl": "text-[4.5rem] leading-[5.375rem] tracking-[-0.02em]", // 72px / 90px
+			"2xl": "text-[3rem] md:text-[4.5rem] md:leading-[5.375rem] md:tracking-[-0.02em]", // 72px / 90px
 		},
 		highContrast: {
 			true: "",
