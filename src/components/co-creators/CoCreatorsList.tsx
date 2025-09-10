@@ -27,7 +27,7 @@ async function getCoCreators(): Promise<Profile[]> {
 			};
 		});
 	} catch (error) {
-		console.error("Failed to fetch co-creators:", error);
+		console.error("Failed to fetch Co-Creators:", error);
 		return [];
 	}
 }
@@ -40,10 +40,10 @@ export default async function CoCreatorsList() {
 			<Container size="6xl">
 				<div className="flex flex-col gap-4">
 					<Heading size="lg" className="font-bold">
-						Co-creators
+						Co-Creators
 					</Heading>
-					<Text size="xl" className="font-semibold">
-						Lasting change takes teamwork at every level: local, regional, provincial, and national. By joining forces, we can make a bigger impact.
+					<Text size="xl">
+						Lasting change takes teamwork: lived experience experts, community advocates, our services, and all levels of government. By joining forces, we can make a bigger impact.
 					</Text>
 				</div>
 
