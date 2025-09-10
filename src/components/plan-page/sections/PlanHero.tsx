@@ -15,7 +15,7 @@ export function PlanHero() {
 			<div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
 				<div id="plan-title" className="space-y-6">
 					<TypographyH2
-						className="text-3xl md:text-4xl font-semibold tracking-tight"
+						className="text-3xl md:text-4xl font-semibold tracking-tight border-b-0 pb-0"
 					>
 						The Plan
 					</TypographyH2>

@@ -342,7 +342,7 @@ const AREAS: FocusArea[] = [
 			"Develop culturally responsive approaches that honor diverse community voices",
 			"Implement trauma-informed practices in all community engagement activities",
 		],
-		variant: "orange",
+		variant: "light",
 	},
 	{
 		id: "systems",
@@ -358,7 +358,7 @@ const AREAS: FocusArea[] = [
 			"Develop cross-training programs for service providers across different sectors",
 			"Implement case management approaches that address multiple needs simultaneously",
 		],
-		variant: "purple",
+		variant: "light",
 	},
 	{
 		id: "housing",
