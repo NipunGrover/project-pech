@@ -43,10 +43,10 @@ export default function PlanLookingAhead() {
 						as="h3"
 						size="lg"
 					>
-						Looking Ahead
+						Looking ahead
 					</Heading>
 					<Text size="xl" className="font-semibold">
-						Our future Priority Actions
+						Our future priority actions
 					</Text>
 				</div>
 

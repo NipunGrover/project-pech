@@ -29,7 +29,7 @@ export default function PlanPage() {
 						<Heading
 							size="2xl"
 						>
-							The plan
+							The Plan
 						</Heading>
 						<Text size="xl">
 							The Plan to End Chronic Homelessness is Waterloo Region’s roadmap to make sure everyone has a safe, stable home. It was created with input from people with lived experience, service providers, community groups, and local government.
@@ -51,7 +51,7 @@ export default function PlanPage() {
 						size="lg"
 						className="text-brand-dark-green text-left"
 					>
-						Our Focus Areas
+						Our focus areas
 					</Heading>
 				</Container>
 			</section>
@@ -64,7 +64,7 @@ export default function PlanPage() {
 				>
 					<div className="flex flex-col gap-4">
 						<Heading size="lg" as="h3">
-							Pushing for Big Change Together
+							Pushing for big change together
 						</Heading>
 						<Text size="xl">
 							Lasting change takes teamwork at every level: local, regional, provincial, and national. By joining forces, we can make a bigger impact.
