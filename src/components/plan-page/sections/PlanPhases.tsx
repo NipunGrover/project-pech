@@ -66,8 +66,8 @@ export default function PlanPhases() {
 		>
 			<div className="max-w-6xl mx-auto px-4 space-y-8">
 				{/* Intro copy matching the provided mock */}
-				<div className="space-y-2">
-					<Heading as="h2" size="md" className="tracking-tight text-white">
+				<div className="space-y-3">
+					<Heading as="h2" size="md" className="tracking-tight text-white mb-4">
 						Pushing for Big Change Together
 					</Heading>
 					<Text size="sm" className="text-neutral-300 max-w-3xl md:text-base">
@@ -75,7 +75,7 @@ export default function PlanPhases() {
 						By joining forces, we can make a bigger impact.
 					</Text>
 				</div>
-				<Heading as="h3" id="roadmap-title" size="sm" className="text-white p-0">
+				<Heading as="h3" id="roadmap-title" size="sm" className="text-white p-0 mb-3">
 					What we're doing in 2025
 				</Heading>
 				<RoadmapCanvas />
@@ -116,7 +116,7 @@ function RoadmapCanvas() {
 								marginLeft: m.align === "left" ? "0.5rem" : undefined,
 							}}
 						>
-							<div className={`space-y-1 ${m.align === "left" ? "text-left" : "text-center"} min-w-[140px] max-w-[260px]`}>
+						<div className={`space-y-2 ${m.align === "left" ? "text-left" : "text-center"} min-w-[140px] max-w-[260px]`}>
 								<Text as="div" size="sm" weight="semibold" className="leading-tight">{m.title}</Text>
 								{m.caption && (
 									<Text as="div" size="xs" className="text-neutral-300 leading-snug">{m.caption}</Text>
@@ -180,7 +180,7 @@ function RoadmapCanvas() {
 								marginLeft: m.align === "left" ? "0.5rem" : undefined,
 							}}
 						>
-							<div className={`space-y-1 ${m.align === "left" ? "text-left" : "text-center"} min-w-[140px] max-w-[260px]`}>
+							<div className={`space-y-2 ${m.align === "left" ? "text-left" : "text-center"} min-w-[140px] max-w-[260px]`}>
 								<Text as="div" size="sm" weight="semibold" className="leading-tight">{m.title}</Text>
 								{m.caption && (
 									<Text as="div" size="xs" className="text-neutral-300 leading-snug md:block hidden">{m.caption}</Text>
@@ -214,4 +214,3 @@ function Legend() {
 		</div>
 	);
 }
-
