@@ -51,6 +51,17 @@
 	--color-popover: var(--popover);
 	--color-card-foreground: var(--card-foreground);
 	--color-card: var(--card);
+	/* Custom Pech Colors cards */
+	--color-pech-purple: #a075b0;
+	--color-pech-dark-purple: #9957b3;
+	--color-pech-red: #db4d52;
+	--color-pech-white: #fafafa;
+	--color-pech-orange: #dc6c46;
+	--color-pech-grey: #5a5a5a;
+
+	/* Pech colors for text */
+	--color-pech-deep-teal: #095a5a;
+
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);
 	--radius-lg: var(--radius);
@@ -101,4 +112,62 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+/* Modal Animations */
+@keyframes modalEnter {
+	0% {
+		opacity: 0;
+		transform: scale(0.95) translateY(1rem);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+}
+
+@keyframes modalExit {
+	0% {
+		opacity: 1;
+		transform: scale(1) translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0.95) translateY(1rem);
+	}
+}
+
+@keyframes backdropEnter {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.modal-enter {
+	animation: modalEnter 0.3s ease-out;
+}
+
+.modal-exit {
+	animation: modalExit 0.2s ease-in;
+}
+
+.backdrop-enter {
+	animation: backdropEnter 0.3s ease-out;
+}
+
+/* Card to Modal Transform */
+.modal-transform-enter {
+	transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-transform-entered {
+	transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+	transform: translate(-50%, -50%) scale(1) !important;
+}
+
+.modal-transform-exiting {
+	transition: all 0.3s cubic-bezier(0.7, 0, 0.84, 0);
 }
