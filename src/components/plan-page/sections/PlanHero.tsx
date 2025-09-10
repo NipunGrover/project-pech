@@ -1,8 +1,5 @@
-import {
-	TypographyH2,
-	TypographyH3,
-	TypographyLead,
-} from "@/components/ui/typography";
+import { Heading } from "@/components/ui/heading";
+import { Text } from "@/components/ui/text";
 import { PlanHeroIllustration } from "../illustrations/PlanHeroIllustration";
 
 export function PlanHero() {
@@ -14,18 +11,16 @@ export function PlanHero() {
 		>
 			<div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
 				<div id="plan-title" className="space-y-6">
-					<TypographyH2
-						className="text-3xl md:text-4xl font-semibold tracking-tight"
-					>
+					<Heading as="h2" size="md" className="tracking-tight">
 						The Plan
-					</TypographyH2>
-					<TypographyH3>Help us reach functional zero by 2030</TypographyH3>
-					<TypographyLead className="text-neutral-300 max-w-prose text-sm md:text-base font-normal">
-						The Plan to End Chronic Homelessness is Waterloo Region’s roadmap to
+					</Heading>
+					<Heading as="h3" size="sm">Help us reach functional zero by 2030</Heading>
+					<Text size="sm" className="text-neutral-300 max-w-prose md:text-base">
+						The Plan to End Chronic Homelessness is Waterloo Region's roadmap to
 						make sure everyone has a safe, stable home. It was created with
 						input from people with lived experience, service providers,
 						community groups, and local government.
-					</TypographyLead>
+					</Text>
 				</div>
 				<PlanHeroIllustration />
 			</div>

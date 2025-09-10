@@ -9,7 +9,7 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { TypographyH3 } from "@/components/ui/typography";
+import { Heading } from "@/components/ui/heading";
 
 export default function PlanHowYouCanHelp() {
 	return (
@@ -19,11 +19,9 @@ export default function PlanHowYouCanHelp() {
 			className="bg-neutral-800 text-white py-14 lg:py-16"
 		>
 			<div className="max-w-6xl mx-auto px-4 space-y-6">
-				<TypographyH3
-					className="font-semibold text-white border-none p-0"
-				>
+				<Heading size="md" className="text-white">
 					How you can help
-				</TypographyH3>
+				</Heading>
 
 				<ul className="list-disc pl-5 space-y-2 text-neutral-200">
 					<li>Learn and share. Tell friends and neighbours about the Plan.</li>

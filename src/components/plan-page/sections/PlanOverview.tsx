@@ -1,8 +1,9 @@
 // app/components/plan-overview.tsx
 "use client";
+import type React from "react";
 import { useLayoutEffect, useRef, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { TypographyH3 } from "@/components/ui/typography";
+import { Heading } from "@/components/ui/heading";
 import { cn } from "@/lib/utils";
 
 interface FocusArea {
@@ -55,7 +56,8 @@ function FocusAreaCard({
 	const [isClicked, setIsClicked] = useState(false);
 	const cardRef = useRef<HTMLDivElement>(null);
 
-	const handleClick = () => {
+	const handleExpandClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+		e.stopPropagation();
 		if (cardRef.current) {
 			setIsClicked(true);
 			setTimeout(() => setIsClicked(false), 150);
@@ -68,41 +70,77 @@ function FocusAreaCard({
 			ref={cardRef}
 			className={cn(
 				v.card,
-				// Avoid horizontal clipping on wide columns by removing hover scale.
-				// Use lift + shadow instead of grow to keep width stable near viewport edges.
-				"rounded-lg shadow-sm transition-transform duration-[225ms] md:hover:-translate-y-0.5 md:hover:shadow-md cursor-pointer",
+				// Keep subtle lift on hover but remove pointer cursor
+				"rounded-lg shadow-sm transition-transform duration-[225ms] md:hover:-translate-y-0.5 md:hover:shadow-md",
 				// Make card portrait: height ~1.3x width
-				"aspect-[1/1.3] active:scale-[0.98]",
+				"aspect-[1/1.3]",
 				isClicked && "scale-[0.98]",
 			)}
-			onClick={handleClick}
 		>
 			<CardContent className="p-4 md:p-5 flex flex-col justify-between w-full h-full">
-				{/* image placeholder */}
-				<div className="h-14 w-14 md:h-16 md:w-16 rounded-md bg-white/10 grid place-items-center ring-1 ring-inset ring-black/5">
-					<svg
-						aria-hidden="true"
-						viewBox="0 0 24 24"
-						className="h-6 w-6 opacity-70"
-					>
-						<path
-							fill="currentColor"
-							d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14H3V5zm2 0v9l3.5-3.5 2.5 2.5L15 9l4 4V5H5z"
-						/>
-					</svg>
+				{/* centered image placeholder (shown when no actual image) */}
+				<div className="flex-1 grid place-items-center">
+					<div className="h-24 w-24 md:h-28 md:w-28 rounded-xl bg-white/30 grid place-items-center ring-1 ring-inset ring-black/5 text-neutral-500">
+						<svg
+							aria-hidden="true"
+							viewBox="0 0 24 24"
+							className="h-12 w-12 md:h-14 md:w-14 opacity-80 overflow-visible"
+							fill="none"
+							stroke="currentColor"
+							strokeWidth="1.75"
+							strokeLinecap="round"
+							strokeLinejoin="round"
+						>
+							<rect x="4.75" y="4.75" width="14.5" height="14.5" rx="2.5" />
+							<circle cx="10" cy="10" r="1.25" fill="currentColor" stroke="none" />
+							<path d="M7.25 16.25l3.25-3.25 2.25 2.25 2.25-2.25 2.75 3.25" />
+						</svg>
+					</div>
 				</div>
 
-				{/* text */}
-				<div className="space-y-2 pt-2">
-					<h3
-						className={cn(
-							"font-semibold leading-tight",
-							"text-base md:text-lg",
-							v.title,
-						)}
-					>
-						{area.title}
-					</h3>
+				{/* text + expand */}
+				<div className="pt-2 space-y-2">
+					<div className="flex items-start justify-between gap-2">
+						<h3
+							className={cn(
+								"font-semibold leading-tight flex-1",
+								"text-base md:text-lg",
+								v.title,
+							)}
+						>
+							{area.title}
+						</h3>
+						<button
+							type="button"
+							onClick={handleExpandClick}
+							aria-label={`Expand: ${area.title}`}
+							className={cn(
+								// pill button look to match mock
+								"inline-flex items-center gap-2 rounded-md border px-3 py-1.5 text-sm shadow-sm shrink-0",
+								"bg-white text-neutral-700 hover:bg-neutral-50 border-neutral-200",
+								"mt-0",
+							)}
+						>
+							<span>Expand</span>
+							<svg
+								aria-hidden="true"
+								viewBox="0 0 24 24"
+								className="h-4 w-4"
+								fill="none"
+								stroke="currentColor"
+								strokeWidth="2"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+							>
+								{/* top-right expand arrow */}
+								<path d="M14 5h5v5" />
+								<path d="M19 5l-7 7" />
+								{/* bottom-left expand arrow */}
+								<path d="M10 19H5v-5" />
+								<path d="M5 19l7-7" />
+							</svg>
+						</button>
+					</div>
 					<p className={cn("text-xs md:text-sm", v.blurb)}>{area.blurb}</p>
 				</div>
 			</CardContent>
@@ -342,7 +380,7 @@ const AREAS: FocusArea[] = [
 			"Develop culturally responsive approaches that honor diverse community voices",
 			"Implement trauma-informed practices in all community engagement activities",
 		],
-		variant: "orange",
+		variant: "light",
 	},
 	{
 		id: "systems",
@@ -358,7 +396,7 @@ const AREAS: FocusArea[] = [
 			"Develop cross-training programs for service providers across different sectors",
 			"Implement case management approaches that address multiple needs simultaneously",
 		],
-		variant: "purple",
+		variant: "light",
 	},
 	{
 		id: "housing",
@@ -438,11 +476,9 @@ export function PlanOverview() {
 			>
 				<div className="max-w-6xl mx-auto px-4 space-y-8">
 					<div className="space-y-2">
-						<TypographyH3
-							className="font-semibold text-pech-deep-teal border-none p-0"
-						>
+						<Heading size="md" className="text-pech-deep-teal">
 							Our Focus Areas
-						</TypographyH3>
+						</Heading>
 					</div>
 
 					<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-7 items-stretch">
