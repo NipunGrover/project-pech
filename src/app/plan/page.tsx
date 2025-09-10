@@ -16,13 +16,13 @@ export const metadata: Metadata = {
 export default function PlanPage() {
 	return (
 		<>
-			<main className="bg-brand-black text-brand-white">
+			<main className="bg-brand-black text-brand-white py-10 md:py-0">
 				<Container
 					size="6xl"
 					className={cn(
 						// "py-16",
-						"grid grid-cols-2",
-						"items-center",
+						"grid grid-cols-1 md:grid-cols-2",
+						"items-center justify-center",
 					)}
 				>
 					<div className="flex flex-col gap-8">
@@ -36,7 +36,10 @@ export default function PlanPage() {
 						</Text>
 					</div>
 					<HeroIllustration
-						className="mt-20 w-172 h-172"
+						className={cn(
+							"md:mt-20 md:w-172 md:h-172",
+							"w-72 h-72",
+						)}
 					/>
 				</Container>
 			</main>
@@ -67,7 +70,7 @@ export default function PlanPage() {
 							Lasting change takes teamwork at every level: local, regional, provincial, and national. By joining forces, we can make a bigger impact.
 						</Text>
 					</div>
-					<div className="flex flex-col gap-4">
+					<div className="flex flex-col md:gap-8">
 						<Heading size="md" as="h4">
 							What we’re doing in 2025
 						</Heading>
