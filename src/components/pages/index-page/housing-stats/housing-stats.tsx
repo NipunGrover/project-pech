@@ -35,7 +35,7 @@ export function HousingStats({ data }: HousingStatsProps) {
 		allDataPoints: data,
 		currentDataPoint: data[data.length - 1],
 		currentDataPointIndex: data.length - 1,
-		isNextDataPointAvailable: data.length > 1,
+		isNextDataPointAvailable: false,
 		isPreviousDataPointAvailable: data.length > 1,
 	});
 
